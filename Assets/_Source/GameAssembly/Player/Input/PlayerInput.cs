@@ -15,16 +15,22 @@ namespace GameAssembly.Player.Input
         
         public void Initialize()
         {
-            Bind();
             _actions.Player.Enable();
+            Bind();
         }
         
         public void Dispose()
         {
+            _actions.Player.Jump.performed -= OnJump;
+            _actions.Player.Interact.performed -= OnInteract;
             _actions?.Dispose();
         }
 
-        private void OnInteract(InputAction.CallbackContext callbackContext) => OnInteractPerformed?.Invoke();
+        private void OnInteract(InputAction.CallbackContext callbackContext)
+        {
+            OnInteractPerformed?.Invoke();
+        }
+
         private void OnJump(InputAction.CallbackContext callbackContext) => OnJumpPerformed?.Invoke();
 
         private void Bind()

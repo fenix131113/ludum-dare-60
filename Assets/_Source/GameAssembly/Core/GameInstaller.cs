@@ -1,4 +1,5 @@
-﻿using GameAssembly.Player.Data;
+﻿using GameAssembly.Player;
+using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
 using UnityEngine;
 using VContainer;
@@ -12,10 +13,9 @@ namespace GameAssembly.Core
         
         private static IObjectResolver _resolver;
 
-        protected override void Awake()
+        protected void Start()
         {
             _resolver = Container;
-            base.Awake();
         }
 
         protected override void Configure(IContainerBuilder builder)
@@ -23,6 +23,7 @@ namespace GameAssembly.Core
             builder.RegisterInstance(playerSettings);
             
             builder.Register<InputSystem_Actions>(Lifetime.Scoped);
+            builder.Register<PlayerInventory>(Lifetime.Scoped);
             
             builder.Register<PlayerInput>(Lifetime.Scoped)
                 .As<IInitializable>()
