@@ -21,8 +21,9 @@ namespace GameAssembly.InventorySystem
             if (!_items.TryAdd(item, count))
             {
                 _items[item] += count;
-                ItemAdded(item, count);
             }
+            
+            ItemAdded(item, count);
         }
 
         public virtual bool TryRemoveItem(ItemDataSO item, int count = 1)
