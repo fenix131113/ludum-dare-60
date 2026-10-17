@@ -11,10 +11,17 @@ namespace GameAssembly.Player
         [SerializeField] private PlayerCamera playerCamera;
 
         [Inject] private PlayerSettings _playerSettings;
+        [Inject] private PlayerState _playerState;
         [Inject] private PlayerInput _playerInput;
 
         private void FixedUpdate()
         {
+            if(_playerState.GetCurrentState() != PlayerInteractStates.FREE && _playerState.GetCurrentState() != PlayerInteractStates.MOVEMENT_ONLY)
+            {
+                rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+                return;
+            }
+
             var currentSpeed = _playerSettings.Speed;
             
             if(_playerInput.IsSprintPressed())

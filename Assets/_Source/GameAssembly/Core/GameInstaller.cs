@@ -24,6 +24,7 @@ namespace GameAssembly.Core
             
             builder.Register<InputSystem_Actions>(Lifetime.Scoped);
             builder.Register<PlayerInventory>(Lifetime.Scoped);
+            builder.Register<PlayerState>(Lifetime.Scoped);
             
             builder.Register<PlayerInput>(Lifetime.Scoped)
                 .As<IInitializable>()

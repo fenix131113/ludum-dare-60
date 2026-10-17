@@ -193,6 +193,16 @@ namespace GameAssembly.Player.Input
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Scroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""0e4eb7da-1034-435b-b522-54e42534ec55"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -591,6 +601,17 @@ namespace GameAssembly.Player.Input
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c96c6aa9-681f-4500-aa9c-b9e48b59272e"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -670,6 +691,7 @@ namespace GameAssembly.Player.Input
             m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
             m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+            m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
         }
 
         ~@InputSystem_Actions()
@@ -760,6 +782,7 @@ namespace GameAssembly.Player.Input
         private readonly InputAction m_Player_Next;
         private readonly InputAction m_Player_Sprint;
         private readonly InputAction m_Player_Inventory;
+        private readonly InputAction m_Player_Scroll;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -811,6 +834,10 @@ namespace GameAssembly.Player.Input
             /// Provides access to the underlying input action "Player/Inventory".
             /// </summary>
             public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Scroll".
+            /// </summary>
+            public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -867,6 +894,9 @@ namespace GameAssembly.Player.Input
                 @Inventory.started += instance.OnInventory;
                 @Inventory.performed += instance.OnInventory;
                 @Inventory.canceled += instance.OnInventory;
+                @Scroll.started += instance.OnScroll;
+                @Scroll.performed += instance.OnScroll;
+                @Scroll.canceled += instance.OnScroll;
             }
 
             /// <summary>
@@ -908,6 +938,9 @@ namespace GameAssembly.Player.Input
                 @Inventory.started -= instance.OnInventory;
                 @Inventory.performed -= instance.OnInventory;
                 @Inventory.canceled -= instance.OnInventory;
+                @Scroll.started -= instance.OnScroll;
+                @Scroll.performed -= instance.OnScroll;
+                @Scroll.canceled -= instance.OnScroll;
             }
 
             /// <summary>
@@ -1083,6 +1116,13 @@ namespace GameAssembly.Player.Input
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnInventory(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Scroll" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnScroll(InputAction.CallbackContext context);
         }
     }
 }

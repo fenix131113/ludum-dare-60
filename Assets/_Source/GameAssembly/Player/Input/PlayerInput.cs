@@ -45,6 +45,7 @@ namespace GameAssembly.Player.Input
         
         public Vector2 ReadMovementVector() => _actions.Player.Move.ReadValue<Vector2>().normalized;
         public Vector2 ReadLookVector() => _actions.Player.Look.ReadValue<Vector2>();
+        public Vector2 ReadScrollVector() => _actions.Player.Scroll.ReadValue<Vector2>();
 
         public bool IsSprintPressed() => _actions.Player.Sprint.ReadValue<float>() > 0;
     }
