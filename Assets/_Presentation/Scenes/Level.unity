@@ -960,6 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssembly::GameAssembly.Player.View.PlayerItemsView
   itemCell: {fileID: -5793959663285928960, guid: fb160874bbfb32d46a58d4e04281c084, type: 3}
   itemsPanelRect: {fileID: 1728512127}
+  hideTime: 2
 --- !u!1 &459371216
 GameObject:
   m_ObjectHideFlags: 0
