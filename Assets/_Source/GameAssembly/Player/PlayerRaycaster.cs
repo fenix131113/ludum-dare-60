@@ -33,7 +33,7 @@ namespace GameAssembly.Player
 
             if (Physics.Raycast(ray, out var hit, _playerSettings.RayLenght, rayLayers))
             {
-                if (hit.transform.TryGetComponent(out IInteractable _))
+                if (hit.transform.TryGetComponent(out IInteractable interactable) && interactable.IsInteractable())
                     ActiveTarget(hit.transform.gameObject);
                 else
                     ResetTarget();

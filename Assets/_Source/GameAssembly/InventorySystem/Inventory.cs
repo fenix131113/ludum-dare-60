@@ -44,5 +44,7 @@ namespace GameAssembly.InventorySystem
 
         public virtual bool IsItemInInventory(ItemDataSO item, int count = 1) =>
             _items.ContainsKey(item) && _items[item] >= count;
+
+        public void ClearInventory() => _items.Clear();
     }
 }

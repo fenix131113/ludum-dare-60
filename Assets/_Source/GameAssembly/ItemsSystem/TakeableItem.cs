@@ -17,6 +17,8 @@ namespace GameAssembly.ItemsSystem
 
         public int GetCount() => 1;
 
+        public bool IsInteractable() => true;
+
         public void Interact(object _)
         {
             if (minigame)
