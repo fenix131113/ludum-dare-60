@@ -1,4 +1,5 @@
 ﻿using GameAssembly.Player;
+using GameAssembly.Player._2D;
 using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
 using UnityEngine;
@@ -24,7 +25,12 @@ namespace GameAssembly.Core
             
             builder.Register<InputSystem_Actions>(Lifetime.Scoped);
             builder.Register<PlayerInventory>(Lifetime.Scoped);
-            builder.Register<PlayerState>(Lifetime.Scoped);
+            builder.Register<PlayerState>(Lifetime.Scoped)
+                .As<IInitializable>()
+                .AsSelf();
+
+            builder.RegisterComponentInHierarchy<PlayerCamera>();
+            builder.RegisterComponentInHierarchy<Player2DMovement>();
             
             builder.Register<PlayerInput>(Lifetime.Scoped)
                 .As<IInitializable>()

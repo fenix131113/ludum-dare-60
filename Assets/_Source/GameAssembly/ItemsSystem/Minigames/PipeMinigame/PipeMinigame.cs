@@ -37,7 +37,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 
         public override void StartMinigame()
         {
-            _playerState.SetCurrentState(PlayerInteractStates.LOCKED);
+            _playerState.SetCurrentInteractionState(PlayerInteractStates.LOCKED);
             _isPlaying = true;
             minigamePanel.SetActive(true);
             ResetMinigame();
@@ -56,7 +56,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 
         public override void WinMinigame()
         {
-            _playerState.SetCurrentState(PlayerInteractStates.FREE);
+            _playerState.SetCurrentInteractionState(PlayerInteractStates.FREE);
             minigamePanel.SetActive(false);
             _isPlaying = false;
             OnMinigameEnded?.Invoke(true);
@@ -64,7 +64,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 
         public override void LooseMinigame()
         {
-            _playerState.SetCurrentState(PlayerInteractStates.FREE);
+            _playerState.SetCurrentInteractionState(PlayerInteractStates.FREE);
             minigamePanel.SetActive(false);
             _isPlaying = false;
             OnMinigameEnded?.Invoke(false);

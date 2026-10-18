@@ -16,22 +16,34 @@ namespace GameAssembly.Player
         [Inject] private PlayerInput _input;
         [Inject] private PlayerState _playerState;
 
+        private Vector3 _startLocalPosition;
         private float _rotationX;
         private float _rotationY;
         private float _currentTiltZ;
         private Vector2 _cameraVector;
 
+        public void ResetCameraToStartPosition() => transform.localPosition = _startLocalPosition;
+        public void ClearZRotation()
+        {
+            _currentTiltZ = 0;
+            transform.localRotation = Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, 0f);
+        }
+
         private void Start()
         {
+            _startLocalPosition = transform.localPosition;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            Bind();
         }
 
         private void Update()
         {
-            if(_playerState.GetCurrentState() != PlayerInteractStates.FREE && _playerState.GetCurrentState() != PlayerInteractStates.CAMERA_ONLY)
+            if (_playerState.GetCurrentState() != PlayerInteractStates.FREE &&
+                _playerState.GetCurrentState() != PlayerInteractStates.CAMERA_ONLY)
                 return;
-            
+
             _cameraVector = _input.ReadLookVector();
 
             _rotationX -= _cameraVector.y * sensitivity;
@@ -42,7 +54,13 @@ namespace GameAssembly.Player
             cam.transform.localRotation =
                 Quaternion.Euler(_rotationX, _rotationY, cam.transform.localRotation.eulerAngles.z);
 
-            CameraTilt();
+            if (!_playerState.IsInTwoD())
+                CameraTilt();
+        }
+
+        private void OnDestroy()
+        {
+            Expose();
         }
 
         private void CameraTilt()
@@ -53,6 +71,27 @@ namespace GameAssembly.Player
 
             var currentEuler = cam.transform.localEulerAngles;
             cam.transform.localRotation = Quaternion.Euler(currentEuler.x, currentEuler.y, _currentTiltZ);
+        }
+
+        private void OnPlayerDimensionChanged()
+        {
+            if(_playerState.IsInTwoD())
+            {
+                ClearZRotation();
+                return;
+            }
+            
+            ResetCameraToStartPosition();
+        }
+
+        private void Bind()
+        {
+            _playerState.OnDimensionChanged += OnPlayerDimensionChanged;
+        }
+
+        private void Expose()
+        {
+            _playerState.OnDimensionChanged -= OnPlayerDimensionChanged;   
         }
     }
 }
