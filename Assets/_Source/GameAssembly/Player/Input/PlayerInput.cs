@@ -12,6 +12,7 @@ namespace GameAssembly.Player.Input
 
         public event Action OnInteractPerformed;
         public event Action OnJumpPerformed;
+        public event Action OnInventoryPerformed;
         
         public void Initialize()
         {
@@ -23,6 +24,7 @@ namespace GameAssembly.Player.Input
         {
             _actions.Player.Jump.performed -= OnJump;
             _actions.Player.Interact.performed -= OnInteract;
+            _actions.Player.Inventory.performed -= OnInventory;
             _actions?.Dispose();
         }
 
@@ -32,15 +34,18 @@ namespace GameAssembly.Player.Input
         }
 
         private void OnJump(InputAction.CallbackContext callbackContext) => OnJumpPerformed?.Invoke();
+        private void OnInventory(InputAction.CallbackContext callbackContext) => OnInventoryPerformed?.Invoke();
 
         private void Bind()
         {
+            _actions.Player.Inventory.performed += OnInventory;
             _actions.Player.Interact.performed += OnInteract;
             _actions.Player.Jump.performed += OnJump;
         }
         
         public Vector2 ReadMovementVector() => _actions.Player.Move.ReadValue<Vector2>().normalized;
         public Vector2 ReadLookVector() => _actions.Player.Look.ReadValue<Vector2>();
+        public Vector2 ReadScrollVector() => _actions.Player.Scroll.ReadValue<Vector2>();
 
         public bool IsSprintPressed() => _actions.Player.Sprint.ReadValue<float>() > 0;
     }

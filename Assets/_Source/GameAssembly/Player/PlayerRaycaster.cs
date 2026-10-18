@@ -11,6 +11,7 @@ namespace GameAssembly.Player
         [SerializeField] private GameObject interactHelper;
         
         [Inject] private PlayerInput _input;
+        [Inject] private PlayerState _playerState;
         [Inject] private PlayerSettings _playerSettings;
 
         private GameObject _target;
@@ -22,6 +23,12 @@ namespace GameAssembly.Player
 
         private void Update()
         {
+            if(_playerState.GetCurrentState() != PlayerInteractStates.FREE && _playerState.GetCurrentState() != PlayerInteractStates.CAMERA_ONLY)
+            {
+                ResetTarget();
+                return;
+            }
+
             var ray = new Ray(transform.position, transform.forward);
 
             if (Physics.Raycast(ray, out var hit, _playerSettings.RayLenght, rayLayers))

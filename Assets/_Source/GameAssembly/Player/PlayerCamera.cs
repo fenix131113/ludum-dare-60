@@ -1,4 +1,5 @@
-﻿using GameAssembly.Player.Input;
+﻿using GameAssembly.Player.Data;
+using GameAssembly.Player.Input;
 using UnityEngine;
 using VContainer;
 
@@ -13,6 +14,7 @@ namespace GameAssembly.Player
         [SerializeField] private float sensitivity = 1f;
 
         [Inject] private PlayerInput _input;
+        [Inject] private PlayerState _playerState;
 
         private float _rotationX;
         private float _rotationY;
@@ -27,6 +29,9 @@ namespace GameAssembly.Player
 
         private void Update()
         {
+            if(_playerState.GetCurrentState() != PlayerInteractStates.FREE && _playerState.GetCurrentState() != PlayerInteractStates.CAMERA_ONLY)
+                return;
+            
             _cameraVector = _input.ReadLookVector();
 
             _rotationX -= _cameraVector.y * sensitivity;
