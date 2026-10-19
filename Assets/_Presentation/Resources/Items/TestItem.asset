@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
   <ItemName>k__BackingField: Test
   <Icon>k__BackingField: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  <Cost>k__BackingField: 50

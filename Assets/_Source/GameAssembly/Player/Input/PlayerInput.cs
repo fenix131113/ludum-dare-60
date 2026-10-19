@@ -11,6 +11,7 @@ namespace GameAssembly.Player.Input
         [Inject] private InputSystem_Actions _actions;
 
         public event Action OnInteractPerformed;
+        public event Action OnSecondInteractPerformed;
         public event Action OnJumpPerformed;
         public event Action OnInventoryPerformed;
         
@@ -32,6 +33,10 @@ namespace GameAssembly.Player.Input
         {
             OnInteractPerformed?.Invoke();
         }
+        private void OnSecondInteract(InputAction.CallbackContext callbackContext)
+        {
+            OnSecondInteractPerformed?.Invoke();
+        }
 
         private void OnJump(InputAction.CallbackContext callbackContext) => OnJumpPerformed?.Invoke();
         private void OnInventory(InputAction.CallbackContext callbackContext) => OnInventoryPerformed?.Invoke();
@@ -40,6 +45,7 @@ namespace GameAssembly.Player.Input
         {
             _actions.Player.Inventory.performed += OnInventory;
             _actions.Player.Interact.performed += OnInteract;
+            _actions.Player.SecondInteract.performed += OnSecondInteract;
             _actions.Player.Jump.performed += OnJump;
         }
         

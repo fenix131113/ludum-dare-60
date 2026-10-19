@@ -7,5 +7,6 @@ namespace GameAssembly.ItemsSystem
     {
         [field: SerializeField] public string ItemName { get; private set; }
         [field: SerializeField] public Sprite Icon { get; private set; }
+        [field: SerializeField] public int Cost { get; private set; }
     }
 }

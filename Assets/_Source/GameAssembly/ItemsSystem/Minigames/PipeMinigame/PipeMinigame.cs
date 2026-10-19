@@ -14,7 +14,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 {
     public class PipeMinigame : AMinigame
     {
-        private const string ALLOWED_CHARS = "QWERTYUIOPASDFGHJKLZXCVBNM";
+        private const string ALLOWED_CHARS = "QWERASDFZXCV";
             
         [SerializeField] private GameObject minigamePanel;
         [SerializeField] private GameObject spaceHelper;

@@ -33,11 +33,11 @@ namespace GameAssembly.InventorySystem
 
             _items[item] -= count;
 
-            if (_items[item] <= 0)
-            {
-                _items.Remove(item);
-                ItemRemoved(item, count);
-            }
+            if (_items[item] > 0)
+                return true;
+            
+            _items.Remove(item);
+            ItemRemoved(item, count);
 
             return true;
         }
