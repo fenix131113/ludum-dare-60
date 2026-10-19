@@ -17,6 +17,9 @@ namespace GameAssembly.ShelterSystem
         public void Interact(object sender)
         {
             _playerState.SwitchShelterState(false);
+            
+            _locationGenerator.GenerateLocation();
+            
             _playerMovement.Teleport(_locationGenerator.GetEnterPoint().position);
             _playerCamera.SetRotation(_locationGenerator.GetEnterPoint().rotation);
         }
