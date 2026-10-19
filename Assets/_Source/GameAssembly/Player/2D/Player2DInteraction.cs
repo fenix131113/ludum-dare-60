@@ -39,7 +39,7 @@ namespace GameAssembly.Player._2D
             for (var i = 0; i < _currentInteractions.Count; i++)
             {
                 var distance = Vector3.Distance(transform.position, _currentInteractions[i].position);
-                if (currentDistance > distance)
+                if (distance >= currentDistance)
                     continue;
 
                 currentDistance = distance;

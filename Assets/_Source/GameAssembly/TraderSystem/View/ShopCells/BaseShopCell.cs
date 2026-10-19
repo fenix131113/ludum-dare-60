@@ -1,5 +1,6 @@
 ﻿using GameAssembly.Core;
 using TMPro;
+using GameAssembly.ItemsSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,12 +15,12 @@ namespace GameAssembly.TraderSystem.View.ShopCells
         [SerializeField] protected Button useButton;
         [SerializeField] protected TMP_Text useButtonLabel;
 
-        public override void Initialize(Sprite icon, string nameText, int count, int cost, string buttonLabel)
+        public override void Initialize(ItemDataSO item, int count, string buttonLabel)
         {
-            iconImage.sprite = icon;
-            nameLabel.text = nameText;
+            iconImage.sprite = item.Icon;
+            nameLabel.text = item.ItemName;
             countLabel.text = "x" + count.ToString();
-            costLabel.text = cost == 0 ? "" : cost.ToString() + "$";
+            costLabel.text = item.Cost == 0 ? "" : item.Cost.ToString() + "$";
             useButtonLabel.text = buttonLabel;
         }
 

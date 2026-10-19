@@ -14,24 +14,35 @@ namespace GameAssembly.TraderSystem.View.ShopCells
         [Inject] protected ShelterInventory _shelterInventory;
         [Inject] protected SellMinigame _sellMinigame;
 
-        public override void Initialize(Sprite icon, string nameText, int count, int itemCost, string buttonLabel)
+        private bool _isSalePending;
+
+        public override void Initialize(ItemDataSO item, int count, string buttonLabel)
         {
-            base.Initialize(icon, nameText, count, itemCost, buttonLabel);
+            sellItem = item;
+            base.Initialize(item, count, buttonLabel);
         }
 
-        public override bool CanUse() => _shelterInventory.IsItemInInventory(sellItem);
+        public override bool CanUse() => !_isSalePending && !_sellMinigame.IsPlaying() &&
+                                         _shelterInventory.IsItemInInventory(sellItem);
 
         public override void Use()
         {
-            if(!CanUse() || !_shelterInventory.TryRemoveItem(sellItem) || _sellMinigame.IsPlaying())
+            if(!CanUse() || !_shelterInventory.TryRemoveItem(sellItem))
                 return;
 
+            _isSalePending = true;
             _sellMinigame.OnMinigameEnded += OnSellGameEnded;
             _sellMinigame.StartMinigame();
         }
 
         protected virtual void OnSellGameEnded(bool isWin)
         {
+            if (!_isSalePending)
+                return;
+
+            _isSalePending = false;
+            _sellMinigame.OnMinigameEnded -= OnSellGameEnded;
+
             if(_sellMinigame.IsDefaultPrice)
                 _playerBank.AddMoney(sellItem.Cost);
             else
@@ -49,8 +60,14 @@ namespace GameAssembly.TraderSystem.View.ShopCells
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            if (_sellMinigame.IsPlaying())
+            if (_sellMinigame != null)
                 _sellMinigame.OnMinigameEnded -= OnSellGameEnded;
+
+            if (_isSalePending)
+            {
+                _isSalePending = false;
+                _shelterInventory.AddItem(sellItem);
+            }
         }
     }
 }
