@@ -5,6 +5,7 @@ using GameAssembly.Player._2D;
 using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
 using GameAssembly.ShelterSystem;
+using GameAssembly.ShelterSystem.CraftSystem;
 using GameAssembly.TraderSystem;
 using GameAssembly.TraderSystem.View;
 using UnityEngine;
@@ -33,6 +34,7 @@ namespace GameAssembly.Core
             builder.Register<PlayerBank>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
+            builder.RegisterComponentInHierarchy<CraftView>();
             builder.RegisterComponentInHierarchy<LootPhaseEnd>();
             builder.RegisterComponentInHierarchy<Player2DMovement>();
             builder.RegisterComponentInHierarchy<PlayerMovement>();

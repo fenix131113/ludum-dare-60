@@ -35,7 +35,7 @@ namespace GameAssembly.LootLocation.Generation
                 if (selectedLoot.LootPrefab)
                 {
                     Instantiate(selectedLoot.LootPrefab, positionData.position,
-                        positionData.rotation);
+                        positionData.rotation).transform.parent = transform;
                 }
             }
         }
