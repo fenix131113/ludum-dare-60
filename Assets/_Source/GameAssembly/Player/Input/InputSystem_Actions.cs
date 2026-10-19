@@ -135,6 +135,16 @@ namespace GameAssembly.Player.Input
                     ""priority"": 0
                 },
                 {
+                    ""name"": ""SecondInteract"",
+                    ""type"": ""Button"",
+                    ""id"": ""ea8769b2-edd6-4113-972f-8ab041a03331"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
                     ""name"": ""Crouch"",
                     ""type"": ""Button"",
                     ""id"": ""27c5f898-bc57-4ee1-8800-db469aca5fe3"",
@@ -571,6 +581,17 @@ namespace GameAssembly.Player.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b91ddc43-62fe-4e14-a8f8-c423c564e1b5"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""SecondInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4f4649ac-64a8-4a73-af11-b3faef356a4d"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -685,6 +706,7 @@ namespace GameAssembly.Player.Input
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+            m_Player_SecondInteract = m_Player.FindAction("SecondInteract", throwIfNotFound: true);
             m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
             m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
             m_Player_Previous = m_Player.FindAction("Previous", throwIfNotFound: true);
@@ -776,6 +798,7 @@ namespace GameAssembly.Player.Input
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Attack;
         private readonly InputAction m_Player_Interact;
+        private readonly InputAction m_Player_SecondInteract;
         private readonly InputAction m_Player_Crouch;
         private readonly InputAction m_Player_Jump;
         private readonly InputAction m_Player_Previous;
@@ -810,6 +833,10 @@ namespace GameAssembly.Player.Input
             /// Provides access to the underlying input action "Player/Interact".
             /// </summary>
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/SecondInteract".
+            /// </summary>
+            public InputAction @SecondInteract => m_Wrapper.m_Player_SecondInteract;
             /// <summary>
             /// Provides access to the underlying input action "Player/Crouch".
             /// </summary>
@@ -876,6 +903,9 @@ namespace GameAssembly.Player.Input
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @SecondInteract.started += instance.OnSecondInteract;
+                @SecondInteract.performed += instance.OnSecondInteract;
+                @SecondInteract.canceled += instance.OnSecondInteract;
                 @Crouch.started += instance.OnCrouch;
                 @Crouch.performed += instance.OnCrouch;
                 @Crouch.canceled += instance.OnCrouch;
@@ -920,6 +950,9 @@ namespace GameAssembly.Player.Input
                 @Interact.started -= instance.OnInteract;
                 @Interact.performed -= instance.OnInteract;
                 @Interact.canceled -= instance.OnInteract;
+                @SecondInteract.started -= instance.OnSecondInteract;
+                @SecondInteract.performed -= instance.OnSecondInteract;
+                @SecondInteract.canceled -= instance.OnSecondInteract;
                 @Crouch.started -= instance.OnCrouch;
                 @Crouch.performed -= instance.OnCrouch;
                 @Crouch.canceled -= instance.OnCrouch;
@@ -1074,6 +1107,13 @@ namespace GameAssembly.Player.Input
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnInteract(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "SecondInteract" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnSecondInteract(InputAction.CallbackContext context);
             /// <summary>
             /// Method invoked when associated input action "Crouch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>

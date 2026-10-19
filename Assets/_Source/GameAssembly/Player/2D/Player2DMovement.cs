@@ -17,7 +17,7 @@ namespace GameAssembly.Player._2D
 
         private void FixedUpdate()
         {
-            if (!_playerState.IsInTwoD())
+            if (!_playerState.IsInTwoD() || _playerState.IsSecondInteractionBlocked())
                 return;
 
             var moveVector = _playerInput.ReadMovementVector();

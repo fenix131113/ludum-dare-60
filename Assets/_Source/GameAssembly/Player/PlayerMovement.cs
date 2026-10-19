@@ -14,8 +14,15 @@ namespace GameAssembly.Player
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerInput _playerInput;
 
-        public void Teleport(Vector3 position) => transform.position = position;
-        
+        public void Teleport(Vector3 position)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+
+            rb.position = position; 
+            transform.position = position;
+        }
+
         private void FixedUpdate()
         {
             if((_playerState.GetCurrentState() != PlayerInteractStates.FREE &&
