@@ -71,6 +71,7 @@ namespace GameAssembly.TraderSystem
             _spawnedDialogues.Clear();
             RandomizeSpawnTimer();
             _gameTimer = gameTime;
+            SpawnDialogue();
         }
 
         public override void WinMinigame()

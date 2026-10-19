@@ -23,6 +23,20 @@ namespace GameAssembly.Player
         private Vector2 _cameraVector;
 
         public void ResetCameraToStartPosition() => transform.localPosition = _startLocalPosition;
+        
+        public void SetRotation(Quaternion targetRotation)
+        {
+            var euler = targetRotation.eulerAngles;
+            
+            _rotationX = Mathf.DeltaAngle(0, euler.x);
+            _rotationY = Mathf.DeltaAngle(0, euler.y);
+            
+            _currentTiltZ = 0f;
+            
+            cam.transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0f);
+            //transform.rotation = targetRotation;
+        }
+        
         public void ClearZRotation()
         {
             _currentTiltZ = 0;

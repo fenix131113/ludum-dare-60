@@ -18,7 +18,7 @@ namespace GameAssembly.Player
         private PlayerInteractStates _currentState = PlayerInteractStates.FREE;
         private bool _isInTwoD;
         private bool _isSecondInteractionBlocked;
-        private bool _isInShelter;
+        private bool _isInShelter = true;
 
         public PlayerInteractStates GetCurrentState() => _currentState;
         public bool IsInTwoD() => _isInTwoD;

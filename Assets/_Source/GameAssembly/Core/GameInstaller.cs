@@ -1,4 +1,6 @@
-﻿using GameAssembly.Player;
+﻿using GameAssembly.LootLocation;
+using GameAssembly.LootLocation.Generation;
+using GameAssembly.Player;
 using GameAssembly.Player._2D;
 using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
@@ -31,7 +33,10 @@ namespace GameAssembly.Core
             builder.Register<PlayerBank>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
+            builder.RegisterComponentInHierarchy<LootPhaseEnd>();
             builder.RegisterComponentInHierarchy<Player2DMovement>();
+            builder.RegisterComponentInHierarchy<PlayerMovement>();
+            builder.RegisterComponentInHierarchy<LocationGenerator>();
             builder.RegisterComponentInHierarchy<TraderView>();
             builder.RegisterComponentInHierarchy<SellMinigame>();
             
