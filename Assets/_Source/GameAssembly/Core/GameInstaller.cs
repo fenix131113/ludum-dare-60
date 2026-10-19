@@ -1,4 +1,4 @@
-﻿using GameAssembly.LootLocation;
+using GameAssembly.LootLocation;
 using GameAssembly.LootLocation.Generation;
 using GameAssembly.Player;
 using GameAssembly.Player._2D;
@@ -41,6 +41,7 @@ namespace GameAssembly.Core
             builder.RegisterComponentInHierarchy<LocationGenerator>();
             builder.RegisterComponentInHierarchy<TraderView>();
             builder.RegisterComponentInHierarchy<SellMinigame>();
+            builder.RegisterComponentInHierarchy<CraftPhysicalGame>();
             
             builder.Register<PlayerInventory>(Lifetime.Scoped)
                 .As<IInitializable>()

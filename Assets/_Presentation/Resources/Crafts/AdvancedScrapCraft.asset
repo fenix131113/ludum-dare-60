@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dd41a868ba4e0896bb1a5e38dbd026, type: 3}
   m_Name: AdvancedScrapCraft
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ShelterSystem.CraftSystem.CraftItemSO
-  <ItemData>k__BackingField: {fileID: 11400000, guid: a5fd4e4f160f6bb41b4f26d7db5a0b56, type: 2}
+  <ItemData>k__BackingField: {fileID: 11400000, guid: 6b709fad200dc7f42bfc373efa7a7a49, type: 2}
   <CraftsRequirements>k__BackingField:
-  - <ItemData>k__BackingField: {fileID: 11400000, guid: 6b709fad200dc7f42bfc373efa7a7a49, type: 2}
-    <Count>k__BackingField: 1
+  - <ItemData>k__BackingField: {fileID: 11400000, guid: a5fd4e4f160f6bb41b4f26d7db5a0b56, type: 2}
+    <Count>k__BackingField: 3

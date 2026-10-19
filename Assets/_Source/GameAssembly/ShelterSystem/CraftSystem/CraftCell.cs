@@ -52,7 +52,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             
             if(!requirementsComplete)
                 return;
-
+            
             _view.StartCrafting(_craft);
         }
     }

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using GameAssembly.Core;
 using GameAssembly.Player;
 using GameAssembly.Player.Data;
@@ -16,9 +16,13 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private List<CraftItemSO> crafts;
         [SerializeField] private List<CraftItemSO> blockedCrafts;
 
+        [Header("Physical Crafting")]
+        [SerializeField] private CraftPhysicalGame physicalGame;
+
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerCamera _playerCamera;
         [Inject] private PlayerInput _input;
+        [Inject] private CraftPhysicalGame _craftPhysicalGame;
 
         private bool _isCrafting;
         private CraftItemSO _currentCraft;
@@ -40,6 +44,33 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             craftsPanel.SetActive(false);
             _isCrafting = true;
             _currentCraft = craft;
+
+            if (_craftPhysicalGame == null)
+                _craftPhysicalGame = physicalGame != null ? physicalGame : FindAnyObjectByType<CraftPhysicalGame>();
+
+            if (_craftPhysicalGame != null)
+            {
+                _craftPhysicalGame.StartCraft(craft, OnCraftFinished, OnCraftCancelled);
+            }
+            else
+            {
+                Debug.LogWarning("[CraftView] CraftPhysicalGame not found in scene!");
+            }
+        }
+
+        private void OnCraftFinished()
+        {
+            _isCrafting = false;
+            _currentCraft = null;
+            CloseCraftMenu();
+        }
+
+        private void OnCraftCancelled()
+        {
+            _isCrafting = false;
+            _currentCraft = null;
+            craftsPanel.SetActive(true);
+            Redraw();
         }
         
         public void OpenCraftMenu()
@@ -78,7 +109,11 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         private void OnInteractionClicked()
         {
             if(_isCrafting)
+            {
+                if (_craftPhysicalGame != null)
+                    _craftPhysicalGame.CancelCraft();
                 return;
+            }
             
             CloseCraftMenu();
         }
