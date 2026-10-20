@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1055172473159074325}
   - component: {fileID: 8717432221539940659}
   - component: {fileID: 950082161977085803}
+  - component: {fileID: 2465609860839723172}
   m_Layer: 0
   m_Name: flower_box
   m_TagString: Untagged
@@ -92,6 +93,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2465609860839723172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6617623103495175857}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.506958, y: 4.5085716, z: 0.11407451}
+  m_Center: {x: -2.2455478, y: 2.2441812, z: 0.057037257}
 --- !u!1001 &6922381519070013248
 PrefabInstance:
   m_ObjectHideFlags: 0

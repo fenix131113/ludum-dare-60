@@ -646,6 +646,8 @@ GameObject:
   - component: {fileID: 8923091190253836289}
   - component: {fileID: 8389023794199956923}
   - component: {fileID: 8327355651346941179}
+  - component: {fileID: 5241994671979180438}
+  - component: {fileID: 9161869753962310043}
   m_Layer: 0
   m_Name: W5_A_brick_arch
   m_TagString: Untagged
@@ -742,6 +744,48 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5241994671979180438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462934571231704944}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2468662, y: 2.3675597, z: 9.083764}
+  m_Center: {x: -0.56042933, y: 0.87907994, z: 4.252047}
+--- !u!65 &9161869753962310043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462934571231704944}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.324155, y: 2.3675597, z: 9.083765}
+  m_Center: {x: 4.579322, y: 0.87907994, z: 4.2520466}
 --- !u!1 &4467136981280875063
 GameObject:
   m_ObjectHideFlags: 0

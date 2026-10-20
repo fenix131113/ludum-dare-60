@@ -2490,6 +2490,8 @@ GameObject:
   - component: {fileID: 4926912959647461739}
   - component: {fileID: 9124747933609207072}
   - component: {fileID: 3813585516147206477}
+  - component: {fileID: 171176287135583094}
+  - component: {fileID: 5608690105594936334}
   m_Layer: 0
   m_Name: W2_3_brick
   m_TagString: Untagged
@@ -2588,6 +2590,48 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &171176287135583094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126752694823556644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.790421, y: 2.3348718, z: 13.970453}
+  m_Center: {x: 1.1773858, y: -0.6599487, z: 6.629988}
+--- !u!65 &5608690105594936334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126752694823556644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.377157, y: 4.255767, z: 13.970453}
+  m_Center: {x: 9.960963, y: -1.6203961, z: 6.629988}
 --- !u!1 &6278203209903953254
 GameObject:
   m_ObjectHideFlags: 0
