@@ -1,4 +1,5 @@
-﻿using GameAssembly.Player;
+﻿using GameAssembly.Core;
+using GameAssembly.Player;
 using UnityEngine;
 using VContainer;
 
@@ -10,6 +11,7 @@ namespace GameAssembly.LootLocation.Generation
             
         [Inject] private PlayerMovement _playerMovement;
         [Inject] private PlayerCamera _playerCamera;
+        [Inject] private ScreenTransition _screenTransition;
 
         private Transform _pointToTeleport;
         
@@ -21,12 +23,18 @@ namespace GameAssembly.LootLocation.Generation
         public Transform GetSpawnPoint() => spawnPoint;
         public Transform GetPointToTeleport() => _pointToTeleport;
 
-        public bool IsInteractable() => true;
+        public bool IsInteractable() => _pointToTeleport && !_screenTransition.IsTransitioning;
 
         public void Interact(object sender)
         {
-            _playerMovement.Teleport(_pointToTeleport.position);
-            _playerCamera.SetRotation(_pointToTeleport.rotation);
+            if (!IsInteractable())
+                return;
+
+            _screenTransition.Transition(() =>
+            {
+                _playerMovement.Teleport(_pointToTeleport.position);
+                _playerCamera.SetRotation(_pointToTeleport.rotation);
+            });
         }
     }
 }

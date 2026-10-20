@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using GameAssembly.Core;
 using GameAssembly.Player;
 using TMPro;
 using UnityEngine;
@@ -15,8 +16,10 @@ namespace GameAssembly.LootLocation
 
         [Inject] private LootPhaseEnd _lootPhaseEnd;
         [Inject] private PlayerState _playerState;
+        [Inject] private ScreenTransition _screenTransition;
 
         private float _currentTimer;
+        private bool _isEnding;
 
         private void Start()
         {
@@ -25,19 +28,17 @@ namespace GameAssembly.LootLocation
 
         private void Update()
         {
-            if (_playerState.IsInShelter() || _currentTimer < 0)
+            if (_playerState.IsInShelter() || _isEnding || _screenTransition.IsTransitioning)
                 return;
 
-            _currentTimer -= Time.deltaTime;
+            _currentTimer = Mathf.Max(0f, _currentTimer - Time.deltaTime);
 
             if (_currentTimer <= 0)
             {
+                _isEnding = true;
                 StartCoroutine(LooseDelay());
             }
 
-            if(_currentTimer < 0)
-                return;
-            
             timeLabel.text = Mathf.FloorToInt(_currentTimer / 60).ToString("00") + ":" +
                              Mathf.FloorToInt(_currentTimer % 60).ToString("00");
         }
@@ -55,6 +56,7 @@ namespace GameAssembly.LootLocation
         private void OnShelterStateChanged()
         {
             StopAllCoroutines();
+            _isEnding = false;
 
             if (_playerState.IsInShelter())
             {
@@ -68,7 +70,18 @@ namespace GameAssembly.LootLocation
 
         private IEnumerator LooseDelay()
         {
-            yield return new WaitForSeconds(endDelay);
+            var remaining = endDelay;
+
+            while (remaining > 0f)
+            {
+                yield return null;
+
+                if (!_screenTransition.IsTransitioning)
+                    remaining -= Time.deltaTime;
+            }
+
+            while (_screenTransition.IsTransitioning)
+                yield return null;
 
             Loose();
         }

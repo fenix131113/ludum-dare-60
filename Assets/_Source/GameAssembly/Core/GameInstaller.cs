@@ -45,6 +45,7 @@ namespace GameAssembly.Core
             builder.RegisterComponentInHierarchy<SellMinigame>();
             builder.RegisterComponentInHierarchy<CraftPhysicalGame>();
             builder.RegisterComponentInHierarchy<DayEndView>();
+            builder.RegisterComponentInHierarchy<ScreenTransition>();
             
             builder.Register<PlayerInventory>(Lifetime.Scoped)
                 .As<IInitializable>()

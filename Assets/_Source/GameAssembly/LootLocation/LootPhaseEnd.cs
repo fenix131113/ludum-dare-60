@@ -1,4 +1,5 @@
-﻿using GameAssembly.Player;
+﻿using GameAssembly.Core;
+using GameAssembly.Player;
 using UnityEngine;
 using VContainer;
 
@@ -11,14 +12,20 @@ namespace GameAssembly.LootLocation
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerMovement _playerMovement;
         [Inject] private PlayerInventory _playerInventory;
+        [Inject] private PlayerCamera _playerCamera;
+        [Inject] private ScreenTransition _screenTransition;
 
         public Transform GetShelterPoint() => shelterPoint;
         
         public void EndLootLoose()
         {
-            _playerInventory.ClearInventory();
-            _playerMovement.Teleport(shelterPoint.position);
-            _playerState.SwitchShelterState(true);
+            _screenTransition.Transition(() =>
+            {
+                _playerInventory.ClearInventory();
+                _playerMovement.Teleport(shelterPoint.position);
+                _playerCamera.SetRotation(shelterPoint.rotation);
+                _playerState.SwitchShelterState(true);
+            });
         }
     }
 }
