@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b14160e856444a19d9cd5145907b1d0, type: 3}
+  m_Name: NotCHEESEBlueprint
+  m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.BlueprintItemDataSO
+  <ItemName>k__BackingField: "notCHEESE Blueprint"
+  <Icon>k__BackingField: {fileID: 0}
+  <Cost>k__BackingField: 0
+  <StoryItem>k__BackingField: 0
+  <Description>k__BackingField: ""
+  <LootPrefab>k__BackingField: {fileID: 0}
+  <Craft>k__BackingField: {fileID: 11400000, guid: 5b569274610d5eac8bf14547a20b3a75, type: 2}

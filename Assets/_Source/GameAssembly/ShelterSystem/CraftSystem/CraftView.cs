@@ -32,6 +32,12 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         public IReadOnlyCollection<CraftItemSO> Crafts => crafts;
 
         public bool IsCraftBlocked(CraftItemSO craft) => blockedCrafts.Contains(craft);
+
+        public void BlockCraft(CraftItemSO craft)
+        {
+            if (!blockedCrafts.Contains(craft))
+                blockedCrafts.Add(craft);
+        }
         
         public void UnblockCraft(CraftItemSO craft)
         {

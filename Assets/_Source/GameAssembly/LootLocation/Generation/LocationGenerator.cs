@@ -18,7 +18,10 @@ namespace GameAssembly.LootLocation.Generation
 
         [SerializeField] private List<BlueprintItemDataSO> blueprints = new();
 
+        [SerializeField] private List<LootWeightData> storyLootWeights = new();
+
         [Inject] private CraftView _craftView;
+        [Inject] private StoryLootSystem _storyLootSystem;
 
         private readonly List<Room> _mediumSpawned = new();
         private readonly List<Room> _transitionSpawned = new();
@@ -33,6 +36,7 @@ namespace GameAssembly.LootLocation.Generation
         public void GenerateLocation()
         {
             ClearRooms();
+            _storyLootSystem.BeginLocation();
             _currentSpawnOffset = 0;
 
             var selectedStartRoom = enterRoomsPrefabs[Random.Range(0, enterRoomsPrefabs.Length)];
@@ -86,16 +90,7 @@ namespace GameAssembly.LootLocation.Generation
             if (availableBlueprints.Count == 0)
                 return;
 
-            var positions = new List<Transform>();
-
-            foreach (var spawner in _lootSpawners)
-            {
-                foreach (var position in spawner.LootPositions)
-                {
-                    if (position && !positions.Contains(position))
-                        positions.Add(position);
-                }
-            }
+            var positions = GetAvailableLootPositions();
 
             if (positions.Count == 0)
             {
@@ -105,12 +100,32 @@ namespace GameAssembly.LootLocation.Generation
 
             var selectedBlueprint = availableBlueprints[Random.Range(0, availableBlueprints.Count)];
             var selectedPosition = positions[Random.Range(0, positions.Count)];
+            SpawnReservedLoot(selectedBlueprint.LootPrefab, selectedPosition);
+        }
+
+        private List<Transform> GetAvailableLootPositions()
+        {
+            var positions = new List<Transform>();
 
             foreach (var spawner in _lootSpawners)
-                spawner.ReserveLootPosition(selectedPosition);
+            {
+                foreach (var position in spawner.LootPositions)
+                {
+                    if (position && !positions.Contains(position) &&
+                        !_lootSpawners.Exists(lootSpawner => lootSpawner.IsLootPositionReserved(position)))
+                        positions.Add(position);
+                }
+            }
 
-            Instantiate(selectedBlueprint.LootPrefab, selectedPosition.position, selectedPosition.rotation,
-                selectedPosition);
+            return positions;
+        }
+
+        private void SpawnReservedLoot(GameObject prefab, Transform position)
+        {
+            foreach (var spawner in _lootSpawners)
+                spawner.ReserveLootPosition(position);
+
+            Instantiate(prefab, position.position, position.rotation, position);
         }
 
 
@@ -136,7 +151,11 @@ namespace GameAssembly.LootLocation.Generation
             var spawned = Instantiate(room, startRoomPoint.position + Vector3.forward * _currentSpawnOffset,
                 Quaternion.identity);
             GameInstaller.InjectGameObject(spawned.gameObject);
-            _lootSpawners.AddRange(spawned.GetComponentsInChildren<RoomLootSpawner>());
+            var spawners = spawned.GetComponentsInChildren<RoomLootSpawner>();
+            _lootSpawners.AddRange(spawners);
+
+            foreach (var spawner in spawners)
+                spawner.InitializeStoryLoot(_storyLootSystem, storyLootWeights);
 
             _currentSpawnOffset += roomDistance;
 

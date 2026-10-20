@@ -22,7 +22,7 @@ namespace GameAssembly.TraderSystem.View.ShopCells
             base.Initialize(item, count, buttonLabel);
         }
 
-        public override bool CanUse() => !_isSalePending && !_sellMinigame.IsPlaying() &&
+        public override bool CanUse() => sellItem && !sellItem.StoryItem && !_isSalePending && !_sellMinigame.IsPlaying() &&
                                          _shelterInventory.IsItemInInventory(sellItem);
 
         public override void Use()

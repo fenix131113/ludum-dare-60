@@ -23,7 +23,7 @@ namespace GameAssembly.TraderSystem.View
             
             foreach (var item in _shelterInventory.Items)
             {
-                if(!allowedToSellItems.Contains(item.Key))
+                if(item.Key.StoryItem || !allowedToSellItems.Contains(item.Key))
                     continue;
                 
                 var spawned = Instantiate(cellShopPrefab, sellContent);

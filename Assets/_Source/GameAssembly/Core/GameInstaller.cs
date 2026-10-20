@@ -32,6 +32,8 @@ namespace GameAssembly.Core
             builder.Register<InputSystem_Actions>(Lifetime.Scoped);
             builder.Register<ShelterInventory>(Lifetime.Scoped);
             builder.Register<PlayerBank>(Lifetime.Scoped);
+            builder.Register<StoryQuestSystem>(Lifetime.Scoped);
+            builder.Register<StoryLootSystem>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
             builder.RegisterComponentInHierarchy<CraftView>();

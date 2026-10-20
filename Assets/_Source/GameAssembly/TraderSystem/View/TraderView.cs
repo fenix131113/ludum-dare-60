@@ -34,7 +34,7 @@ namespace GameAssembly.TraderSystem.View
             _playerState.ChangeBlockSecondInteraction(false);
         }
 
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             if(_isBind)
             {

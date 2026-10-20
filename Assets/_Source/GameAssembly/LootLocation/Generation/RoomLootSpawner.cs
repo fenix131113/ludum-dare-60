@@ -13,10 +13,20 @@ namespace GameAssembly.LootLocation.Generation
         [SerializeField] private List<LootWeightData> lootWeights;
 
         private readonly HashSet<Transform> _reservedLootPositions = new();
+        private StoryLootSystem _storyLootSystem;
+        private IReadOnlyList<LootWeightData> _storyLootWeights = new LootWeightData[0];
+
+        public void InitializeStoryLoot(StoryLootSystem storyLootSystem, IReadOnlyList<LootWeightData> weights)
+        {
+            _storyLootSystem = storyLootSystem;
+            _storyLootWeights = weights;
+        }
 
         public IReadOnlyList<Transform> LootPositions => lootPositions;
 
         public void ReserveLootPosition(Transform position) => _reservedLootPositions.Add(position);
+
+        public bool IsLootPositionReserved(Transform position) => _reservedLootPositions.Contains(position);
 
         private void Start()
         {
@@ -42,13 +52,22 @@ namespace GameAssembly.LootLocation.Generation
                 {
                     Instantiate(selectedLoot.LootPrefab, positionData.position,
                         positionData.rotation).transform.parent = transform;
+
+                    if (selectedLoot.StoryItem)
+                        _storyLootSystem.RegisterSpawned(selectedLoot);
                 }
             }
         }
 
         private MaterialItemDataSO GetRandomItemByWeight(List<LootWeightData> pool)
         {
-            var totalWeight = pool.Where(lootData => lootData.Item && lootData.Weight > 0)
+            var normalLoot = pool ?? new List<LootWeightData>();
+            var storyLoot = _storyLootWeights ?? new LootWeightData[0];
+            var availableLoot = normalLoot.Where(lootData => lootData.Item && !lootData.Item.StoryItem && lootData.Weight > 0)
+                .Concat(storyLoot.Where(lootData => lootData.Item && lootData.Item.StoryItem && lootData.Item.LootPrefab &&
+                    lootData.Weight > 0 && _storyLootSystem != null && _storyLootSystem.CanSpawn(lootData.Item)))
+                .ToArray();
+            var totalWeight = availableLoot
                 .Sum(lootData => lootData.Weight);
 
             if (totalWeight <= 0f)
@@ -57,7 +76,7 @@ namespace GameAssembly.LootLocation.Generation
             var randomValue = Random.Range(0f, totalWeight);
             var currentWeightSum = 0f;
 
-            foreach (var lootData in pool.Where(lootData => lootData.Item != null && !(lootData.Weight <= 0)))
+            foreach (var lootData in availableLoot)
             {
                 currentWeightSum += lootData.Weight;
                 if (randomValue <= currentWeightSum)

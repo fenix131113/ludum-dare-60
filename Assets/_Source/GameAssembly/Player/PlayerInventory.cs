@@ -1,6 +1,7 @@
 ﻿using System;
 using GameAssembly.InventorySystem;
 using GameAssembly.ItemsSystem;
+using GameAssembly.LootLocation.Generation;
 using GameAssembly.ShelterSystem;
 using GameAssembly.ShelterSystem.CraftSystem;
 using VContainer;
@@ -13,6 +14,7 @@ namespace GameAssembly.Player
         [Inject] private PlayerState _playerState;
         [Inject] private ShelterInventory _shelterInventory;
         [Inject] private CraftView _craftView;
+        [Inject] private StoryLootSystem _storyLootSystem;
 
         public void Initialize()
         {
@@ -33,6 +35,7 @@ namespace GameAssembly.Player
                 }
 
                 _shelterInventory.AddItem(item.Key, item.Value);
+                _storyLootSystem.RegisterCollected(item.Key);
             }
             
             ClearInventory();
