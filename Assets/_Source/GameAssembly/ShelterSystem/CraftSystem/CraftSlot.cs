@@ -27,6 +27,14 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         public bool IsOccupied => CurrentItem != null;
         public bool IsCorrectlyFilled => CurrentItem != null && CurrentItem.ItemData == acceptedItem;
 
+        public void Initialize(ItemDataSO item, Transform point, float radius)
+        {
+            acceptedItem = item;
+            snapPoint = point;
+            snapRadius = radius;
+            ResetSlot();
+        }
+
         private void Awake()
         {
             if (snapPoint == null)

@@ -406,8 +406,20 @@ MonoBehaviour:
   - {fileID: 5110821799731480385}
   - {fileID: 3924298085042215569}
   lootWeights:
-  - item: {fileID: 11400000, guid: 828d7c85e856f4a41a6edebc918584be, type: 2}
-    weight: 50
+  - item: {fileID: 11400000, guid: 855f913525d85f599a1ae08d074bd82c, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: c81cb72f193851a9a4efc887df7142a8, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: fb8e603a21e951b49b6412dc973edebe, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: 6a8a4dcc66815152bc5d2b67d1cae948, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: 43c9f48ac314549095ee7736dcbb9b3e, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: 9eee964c7107556884ad4ce0fd4266e7, type: 2}
+    weight: 1
+  - item: {fileID: 11400000, guid: 03b82be583505755acd004ebd715d9f5, type: 2}
+    weight: 1
 --- !u!1 &5309139234204003983
 GameObject:
   m_ObjectHideFlags: 0

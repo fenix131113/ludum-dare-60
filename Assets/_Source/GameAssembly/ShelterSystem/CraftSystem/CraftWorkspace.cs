@@ -19,40 +19,60 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private Transform[] itemSpawnPoints;
         [SerializeField] private List<CraftDraggableItem> prePlacedItems = new();
 
+        [Header("Automatic Setup")]
+        [SerializeField] private bool autoSetup;
+        [SerializeField] private Transform[] assemblyPoints;
+        [SerializeField] private CraftSlot slotPrefab;
+        [SerializeField, Min(0.01f)] private float slotSnapRadius = 0.35f;
+
         private readonly List<CraftDraggableItem> _spawnedItems = new();
         private readonly List<CraftDraggableItem> _activeItems = new();
+        private readonly List<CraftSlot> _spawnedSlots = new();
 
         public CraftItemSO CraftItem => craftItem;
         public Transform CloseUpCameraPoint => closeUpCameraPoint;
         public IReadOnlyList<CraftSlot> Slots => slots;
         public IReadOnlyList<CraftDraggableItem> ActiveItems => _activeItems;
 
-        public bool IsCompleted => slots != null && slots.Length > 0 && slots.All(s => s.IsCorrectlyFilled);
+        public bool IsCompleted => slots != null && slots.Length > 0 && slots.All(s => s && s.IsCorrectlyFilled);
 
         private void Awake()
         {
-            if (slots == null || slots.Length == 0)
+            if (!autoSetup && (slots == null || slots.Length == 0))
                 slots = GetComponentsInChildren<CraftSlot>(true);
 
-            if (prePlacedItems == null || prePlacedItems.Count == 0)
+            if (!autoSetup && (prePlacedItems == null || prePlacedItems.Count == 0))
             {
                 prePlacedItems = GetComponentsInChildren<CraftDraggableItem>(true).ToList();
             }
         }
 
-        public void SetupWorkspace()
+        public bool SetupWorkspace()
         {
+            ClearWorkspace();
+
+            if (autoSetup && !ValidateAutomaticSetup())
+                return false;
+
             gameObject.SetActive(true);
 
             if (silhouette != null)
                 silhouette.SetActive(true);
+
+            if (autoSetup)
+            {
+                SpawnSlots();
+                SpawnRequiredItems();
+                return true;
+            }
 
             if (slots == null || slots.Length == 0)
                 slots = GetComponentsInChildren<CraftSlot>(true);
 
             foreach (var slot in slots)
             {
-                slot.ResetSlot();
+                if (slot)
+                    slot.ResetSlot();
             }
 
             _activeItems.Clear();
@@ -62,6 +82,9 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             {
                 foreach (var item in prePlacedItems)
                 {
+                    if (!item)
+                        continue;
+
                     item.gameObject.SetActive(true);
                     item.ResetItem();
                     _activeItems.Add(item);
@@ -72,28 +95,53 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             {
                 SpawnRequiredItems();
             }
+
+            return true;
         }
 
         public void ClearWorkspace()
         {
-            foreach (var slot in slots)
+            if (slots != null)
             {
-                slot.ResetSlot();
+                foreach (var slot in slots)
+                {
+                    if (slot)
+                        slot.ResetSlot();
+                }
             }
 
             foreach (var spawned in _spawnedItems)
             {
                 if (spawned != null)
+                {
+                    spawned.gameObject.SetActive(false);
                     Destroy(spawned.gameObject);
+                }
             }
             _spawnedItems.Clear();
 
-            foreach (var prePlaced in prePlacedItems)
+            foreach (var slot in _spawnedSlots)
             {
-                if (prePlaced != null)
+                if (slot)
                 {
-                    prePlaced.ResetItem();
-                    prePlaced.gameObject.SetActive(false);
+                    slot.gameObject.SetActive(false);
+                    Destroy(slot.gameObject);
+                }
+            }
+
+            if (_spawnedSlots.Count > 0)
+                slots = new CraftSlot[0];
+
+            _spawnedSlots.Clear();
+
+            if (prePlacedItems != null)
+            {
+                foreach (var prePlaced in prePlacedItems)
+                {
+                    if (prePlaced != null)
+                    {
+                        prePlaced.gameObject.SetActive(false);
+                    }
                 }
             }
 
@@ -103,6 +151,61 @@ namespace GameAssembly.ShelterSystem.CraftSystem
                 silhouette.SetActive(false);
 
             gameObject.SetActive(false);
+        }
+
+        private bool ValidateAutomaticSetup()
+        {
+            if (!craftItem || craftItem.CraftsRequirements == null || craftItem.CraftsRequirements.Count == 0 ||
+                craftItem.CraftsRequirements.Any(requirement => requirement == null || !requirement.ItemData || requirement.Count <= 0))
+            {
+                Debug.LogError($"[CraftWorkspace] Assign a recipe with valid ingredients in {name}!");
+                return false;
+            }
+
+            var count = craftItem.CraftsRequirements.Sum(requirement => requirement.Count);
+
+            if (!ArePointsValid(itemSpawnPoints, count) || !ArePointsValid(assemblyPoints, count))
+            {
+                Debug.LogError($"[CraftWorkspace] {craftItem.name} needs {count} different Item Spawn Points and {count} different Assembly Points in {name}!");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ArePointsValid(Transform[] points, int count) => points != null && points.Length >= count &&
+            points.Take(count).All(point => point) && points.Take(count).Distinct().Count() == count;
+
+        private void SpawnSlots()
+        {
+            var slotIndex = 0;
+
+            foreach (var requirement in craftItem.CraftsRequirements)
+            {
+                for (var i = 0; i < requirement.Count; i++)
+                {
+                    var point = assemblyPoints[slotIndex];
+                    CraftSlot slot;
+
+                    if (slotPrefab)
+                        slot = Instantiate(slotPrefab, point.position, point.rotation, transform);
+                    else
+                    {
+                        var instance = new GameObject("CraftSlot");
+                        instance.transform.SetParent(transform, false);
+                        instance.transform.SetPositionAndRotation(point.position, point.rotation);
+                        slot = instance.AddComponent<CraftSlot>();
+                    }
+
+                    slot.name = $"Slot_{requirement.ItemData.ItemName}_{i + 1}";
+                    slot.Initialize(requirement.ItemData, point, slotSnapRadius);
+                    slot.gameObject.SetActive(true);
+                    _spawnedSlots.Add(slot);
+                    slotIndex++;
+                }
+            }
+
+            slots = _spawnedSlots.ToArray();
         }
 
         private void SpawnRequiredItems()
@@ -150,12 +253,16 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
                     instance.name = $"{requirement.ItemData.ItemName}_{i + 1}";
 
+                    if (!instance.TryGetComponent<Collider>(out _))
+                        instance.AddComponent<BoxCollider>();
+
                     if (!instance.TryGetComponent(out CraftDraggableItem draggable))
                     {
                         draggable = instance.AddComponent<CraftDraggableItem>();
                     }
 
                     draggable.Initialize(requirement.ItemData, spawnPos, spawnRot);
+                    instance.SetActive(true);
                     _spawnedItems.Add(draggable);
                     _activeItems.Add(draggable);
 

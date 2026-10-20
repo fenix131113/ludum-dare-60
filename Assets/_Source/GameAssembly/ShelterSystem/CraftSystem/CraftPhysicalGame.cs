@@ -117,12 +117,20 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
             if (workspace == null)
             {
-                Debug.LogWarning($"[CraftPhysicalGame] No CraftWorkspace found for {craft.name}! Auto-generating generic workspace on table.");
-                workspace = CreateGenericWorkspace(craft);
+                Debug.LogError($"[CraftPhysicalGame] Assign a CraftWorkspace for {craft.name}!");
+                _currentCraft = null;
+                _onCancelledCallback?.Invoke();
+                return;
             }
 
             _currentWorkspace = workspace;
-            _currentWorkspace.SetupWorkspace();
+            if (!_currentWorkspace.SetupWorkspace())
+            {
+                _currentWorkspace = null;
+                _currentCraft = null;
+                _onCancelledCallback?.Invoke();
+                return;
+            }
 
             SetupDragPlane();
             TransitionCameraToWorkspace();
@@ -185,7 +193,8 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             {
                 if (Physics.Raycast(ray, out RaycastHit hit, 50f, draggableLayers))
                 {
-                    if (hit.collider.TryGetComponent<CraftDraggableItem>(out var draggable))
+                    var draggable = hit.collider.GetComponentInParent<CraftDraggableItem>();
+                    if (draggable && _currentWorkspace.ActiveItems.Contains(draggable))
                     {
                         _draggedItem = draggable;
                         _draggedItem.OnStartDrag();
@@ -390,15 +399,5 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             return Camera.main;
         }
 
-        private CraftWorkspace CreateGenericWorkspace(CraftItemSO craft)
-        {
-            Transform parent = workspacesParent != null ? workspacesParent : transform;
-            var obj = new GameObject($"Workspace_{craft.name}");
-            obj.transform.SetParent(parent, false);
-
-            var ws = obj.AddComponent<CraftWorkspace>();
-            // Use reflection or serialized backing field if needed
-            return ws;
-        }
     }
 }

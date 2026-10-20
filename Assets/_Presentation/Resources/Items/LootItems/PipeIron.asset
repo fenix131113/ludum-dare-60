@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
-  m_Name: Wood
+  m_Name: PipeIron
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Wood"
+  <ItemName>k__BackingField: Iron Pipe
   <Icon>k__BackingField: {fileID: 0}
-  <Cost>k__BackingField: 5
+  <Cost>k__BackingField: 2
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: "log (something small)"
-  <LootPrefab>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: 
+  <LootPrefab>k__BackingField: {fileID: 2824815166591465135, guid: 2c00c17c67609e640881490dfa990155, type: 3}
   <WorkbenchPrefab>k__BackingField: {fileID: 0}
