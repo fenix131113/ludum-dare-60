@@ -14,9 +14,8 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private Transform closeUpCameraPoint;
         [SerializeField] private GameObject silhouette;
 
-        [Header("Slots & Spawns")]
+        [Header("Slots & Items")]
         [SerializeField] private CraftSlot[] slots;
-        [SerializeField] private Transform[] itemSpawnPoints;
         [SerializeField] private List<CraftDraggableItem> prePlacedItems = new();
 
         [Header("Automatic Setup")]
@@ -47,11 +46,11 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             }
         }
 
-        public bool SetupWorkspace()
+        public bool SetupWorkspace(Transform[] itemSpawnPoints)
         {
             ClearWorkspace();
 
-            if (autoSetup && !ValidateAutomaticSetup())
+            if (autoSetup && !ValidateAutomaticSetup(itemSpawnPoints))
                 return false;
 
             gameObject.SetActive(true);
@@ -62,7 +61,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             if (autoSetup)
             {
                 SpawnSlots();
-                SpawnRequiredItems();
+                SpawnRequiredItems(itemSpawnPoints);
                 return true;
             }
 
@@ -93,7 +92,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             // Case 2: Dynamically spawn items from requirements
             else if (craftItem != null && craftItem.CraftsRequirements != null)
             {
-                SpawnRequiredItems();
+                SpawnRequiredItems(itemSpawnPoints);
             }
 
             return true;
@@ -153,7 +152,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             gameObject.SetActive(false);
         }
 
-        private bool ValidateAutomaticSetup()
+        private bool ValidateAutomaticSetup(Transform[] itemSpawnPoints)
         {
             if (!craftItem || craftItem.CraftsRequirements == null || craftItem.CraftsRequirements.Count == 0 ||
                 craftItem.CraftsRequirements.Any(requirement => requirement == null || !requirement.ItemData || requirement.Count <= 0))
@@ -166,7 +165,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
             if (!ArePointsValid(itemSpawnPoints, count) || !ArePointsValid(assemblyPoints, count))
             {
-                Debug.LogError($"[CraftWorkspace] {craftItem.name} needs {count} different Item Spawn Points and {count} different Assembly Points in {name}!");
+                Debug.LogError($"[CraftWorkspace] {craftItem.name} needs {count} different Item Spawn Points on CraftPhysicalGame and {count} different Assembly Points in {name}!");
                 return false;
             }
 
@@ -208,7 +207,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             slots = _spawnedSlots.ToArray();
         }
 
-        private void SpawnRequiredItems()
+        private void SpawnRequiredItems(Transform[] itemSpawnPoints)
         {
             int spawnIndex = 0;
 

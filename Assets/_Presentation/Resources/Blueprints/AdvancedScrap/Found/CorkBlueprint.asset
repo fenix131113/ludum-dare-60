@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b14160e856444a19d9cd5145907b1d0, type: 3}
   m_Name: CorkBlueprint
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.BlueprintItemDataSO
-  <ItemName>k__BackingField: "Cork Blueprint"
+  <ItemName>k__BackingField: Cork Blueprint
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
   <Craft>k__BackingField: {fileID: 11400000, guid: 7c6afc48c0bb5d4c8dd2e55d21c97ad3, type: 2}

@@ -17,6 +17,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private Transform workspacesParent;
         [SerializeField] private List<CraftWorkspace> preconfiguredWorkspaces = new();
         [SerializeField] private Transform tableSurfaceTransform;
+        [SerializeField] private Transform[] itemSpawnPoints;
         [SerializeField] private float dragElevation = 0.08f;
         [SerializeField] private LayerMask draggableLayers = ~0;
         [SerializeField] private bool returnToSpawnIfNotSnapped = false;
@@ -124,7 +125,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             }
 
             _currentWorkspace = workspace;
-            if (!_currentWorkspace.SetupWorkspace())
+            if (!_currentWorkspace.SetupWorkspace(itemSpawnPoints))
             {
                 _currentWorkspace = null;
                 _currentCraft = null;
