@@ -283,10 +283,11 @@ GameObject:
   - component: {fileID: 5858872508460782098}
   - component: {fileID: 1046216999079178128}
   - component: {fileID: 7697330703213018612}
-  m_Layer: 0
+  - component: {fileID: 8743366084776612652}
+  m_Layer: 3
   m_Name: door3.003 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -363,6 +364,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8743366084776612652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637171074246831687}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.035743, y: 0.16542935, z: 2.4570968}
+  m_Center: {x: 0.51787126, y: 0.0011486018, z: 1.2285484}
 --- !u!1 &676596039655691413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +1757,7 @@ GameObject:
   m_Layer: 3
   m_Name: erewwer
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
