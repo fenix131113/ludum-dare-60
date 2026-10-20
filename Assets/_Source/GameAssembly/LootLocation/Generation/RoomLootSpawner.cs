@@ -12,8 +12,9 @@ namespace GameAssembly.LootLocation.Generation
         [SerializeField] private List<Transform> lootPositions = new();
         [SerializeField] private List<LootWeightData> lootWeights;
 
-        private readonly HashSet<Transform> _reservedLootPositions = new();
         private StoryLootSystem _storyLootSystem;
+        private BlueprintLootSystem _blueprintLootSystem;
+        private bool _hasSpawned;
         private IReadOnlyList<LootWeightData> _storyLootWeights = new LootWeightData[0];
 
         public void InitializeStoryLoot(StoryLootSystem storyLootSystem, IReadOnlyList<LootWeightData> weights)
@@ -22,11 +23,7 @@ namespace GameAssembly.LootLocation.Generation
             _storyLootWeights = weights;
         }
 
-        public IReadOnlyList<Transform> LootPositions => lootPositions;
-
-        public void ReserveLootPosition(Transform position) => _reservedLootPositions.Add(position);
-
-        public bool IsLootPositionReserved(Transform position) => _reservedLootPositions.Contains(position);
+        public void InitializeBlueprintLoot(BlueprintLootSystem blueprintLootSystem) => _blueprintLootSystem = blueprintLootSystem;
 
         private void Start()
         {
@@ -35,12 +32,14 @@ namespace GameAssembly.LootLocation.Generation
 
         public void SpawnLoot()
         {
-            if (lootPositions == null || lootPositions.Count == 0)
+            if (_hasSpawned || lootPositions == null || lootPositions.Count == 0)
                 return;
+
+            _hasSpawned = true;
 
             foreach (var positionData in lootPositions)
             {
-                if (!positionData || _reservedLootPositions.Contains(positionData))
+                if (!positionData)
                     continue;
 
                 var selectedLoot = GetRandomItemByWeight(lootWeights);
@@ -50,8 +49,14 @@ namespace GameAssembly.LootLocation.Generation
 
                 if (selectedLoot.LootPrefab)
                 {
-                    Instantiate(selectedLoot.LootPrefab, positionData.position,
-                        positionData.rotation).transform.parent = transform;
+                    var spawned = Instantiate(selectedLoot.LootPrefab, positionData.position,
+                        positionData.rotation, transform);
+
+                    if (_blueprintLootSystem != null)
+                    {
+                        foreach (var item in spawned.GetComponentsInChildren<TakeableItem>())
+                            _blueprintLootSystem.RegisterLoot(item);
+                    }
 
                     if (selectedLoot.StoryItem)
                         _storyLootSystem.RegisterSpawned(selectedLoot);
@@ -63,7 +68,7 @@ namespace GameAssembly.LootLocation.Generation
         {
             var normalLoot = pool ?? new List<LootWeightData>();
             var storyLoot = _storyLootWeights ?? new LootWeightData[0];
-            var availableLoot = normalLoot.Where(lootData => lootData.Item && !lootData.Item.StoryItem && lootData.Weight > 0)
+            var availableLoot = normalLoot.Where(lootData => lootData.Item && !lootData.Item.StoryItem && lootData.Item.LootPrefab && lootData.Weight > 0)
                 .Concat(storyLoot.Where(lootData => lootData.Item && lootData.Item.StoryItem && lootData.Item.LootPrefab &&
                     lootData.Weight > 0 && _storyLootSystem != null && _storyLootSystem.CanSpawn(lootData.Item)))
                 .ToArray();

@@ -1,5 +1,6 @@
-﻿using GameAssembly.Core;
+using GameAssembly.Core;
 using GameAssembly.ItemsSystem.Minigames;
+using GameAssembly.LootLocation.Generation;
 using GameAssembly.Player;
 using UnityEngine;
 using VContainer;
@@ -14,18 +15,30 @@ namespace GameAssembly.ItemsSystem
         [SerializeField] private int minigameIndex;
 
         [Inject] private PlayerInventory _inventory;
+        [Inject] private BlueprintLootSystem _blueprintLootSystem;
+
+        private bool _isTaken;
+        private AMinigame _activeMinigame;
 
         public int GetCount() => 1;
 
-        public bool IsInteractable() => true;
+        public bool IsInteractable() => ItemData && !_isTaken && !_activeMinigame;
 
         public void Interact(object _)
         {
+            if (!IsInteractable())
+                return;
+
             if (minigame)
             {
                 var game = MinigamesResolver.Instance.GetMinigame(minigameIndex);
-                game.OnMinigameEnded += OnMinigameEnded;
-                game.StartMinigame();
+
+                if (!game || game.IsPlaying())
+                    return;
+
+                _activeMinigame = game;
+                _activeMinigame.OnMinigameEnded += OnMinigameEnded;
+                _activeMinigame.StartMinigame();
                 return;
             }
 
@@ -34,9 +47,11 @@ namespace GameAssembly.ItemsSystem
 
         private void OnMinigameEnded(bool isWin)
         {
-            var game = MinigamesResolver.Instance.GetMinigame(minigameIndex);
-            game.OnMinigameEnded -= OnMinigameEnded;
-            
+            if (_activeMinigame)
+                _activeMinigame.OnMinigameEnded -= OnMinigameEnded;
+
+            _activeMinigame = null;
+
             if (isWin)
                 OnTake();
         }
@@ -45,19 +60,25 @@ namespace GameAssembly.ItemsSystem
 
         private void OnTake()
         {
+            if (_isTaken)
+                return;
+
+            _isTaken = true;
+            var blueprint = _blueprintLootSystem.TryTakeBlueprint(this);
             _inventory.AddItem(ItemData, GetCount());
-            Destroy(rootObject);
+
+            if (blueprint)
+                _inventory.AddItem(blueprint);
+
+            Destroy(rootObject ? rootObject : gameObject);
         }
 
         private void OnDestroy()
         {
-            if (!minigame)
-                return;
+            _blueprintLootSystem?.UnregisterLoot(this);
 
-            var game = MinigamesResolver.Instance?.GetMinigame(minigameIndex);
-
-            if (game && game.IsPlaying())
-                game.OnMinigameEnded -= OnMinigameEnded;
+            if (_activeMinigame)
+                _activeMinigame.OnMinigameEnded -= OnMinigameEnded;
         }
     }
 }

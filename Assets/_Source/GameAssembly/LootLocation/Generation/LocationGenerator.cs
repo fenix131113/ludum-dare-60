@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using GameAssembly.Core;
 using GameAssembly.ItemsSystem;
-using GameAssembly.ShelterSystem.CraftSystem;
 using UnityEngine;
 using VContainer;
 
@@ -17,15 +16,15 @@ namespace GameAssembly.LootLocation.Generation
         [SerializeField] private float roomDistance;
 
         [SerializeField] private List<BlueprintItemDataSO> blueprints = new();
+        [SerializeField, Range(0f, 1f)] private float blueprintDropChance = 0.1f;
 
         [SerializeField] private List<LootWeightData> storyLootWeights = new();
 
-        [Inject] private CraftView _craftView;
+        [Inject] private BlueprintLootSystem _blueprintLootSystem;
         [Inject] private StoryLootSystem _storyLootSystem;
 
         private readonly List<Room> _mediumSpawned = new();
         private readonly List<Room> _transitionSpawned = new();
-        private readonly List<RoomLootSpawner> _lootSpawners = new();
         private Room _bigSpawned;
         private Room _startSpawned;
 
@@ -37,6 +36,7 @@ namespace GameAssembly.LootLocation.Generation
         {
             ClearRooms();
             _storyLootSystem.BeginLocation();
+            _blueprintLootSystem.BeginLocation(blueprints, blueprintDropChance);
             _currentSpawnOffset = 0;
 
             var selectedStartRoom = enterRoomsPrefabs[Random.Range(0, enterRoomsPrefabs.Length)];
@@ -78,61 +78,10 @@ namespace GameAssembly.LootLocation.Generation
                 
                 _mediumSpawned[i].InitializeConnectedRooms(doorToMedium);
             }
-
-            SpawnBlueprint();
         }
-
-        private void SpawnBlueprint()
-        {
-            var availableBlueprints = blueprints.FindAll(blueprint => blueprint && blueprint.Craft &&
-                blueprint.LootPrefab && _craftView.IsCraftBlocked(blueprint.Craft));
-
-            if (availableBlueprints.Count == 0)
-                return;
-
-            var positions = GetAvailableLootPositions();
-
-            if (positions.Count == 0)
-            {
-                Debug.LogWarning("[LocationGenerator] No loot positions available for a blueprint!");
-                return;
-            }
-
-            var selectedBlueprint = availableBlueprints[Random.Range(0, availableBlueprints.Count)];
-            var selectedPosition = positions[Random.Range(0, positions.Count)];
-            SpawnReservedLoot(selectedBlueprint.LootPrefab, selectedPosition);
-        }
-
-        private List<Transform> GetAvailableLootPositions()
-        {
-            var positions = new List<Transform>();
-
-            foreach (var spawner in _lootSpawners)
-            {
-                foreach (var position in spawner.LootPositions)
-                {
-                    if (position && !positions.Contains(position) &&
-                        !_lootSpawners.Exists(lootSpawner => lootSpawner.IsLootPositionReserved(position)))
-                        positions.Add(position);
-                }
-            }
-
-            return positions;
-        }
-
-        private void SpawnReservedLoot(GameObject prefab, Transform position)
-        {
-            foreach (var spawner in _lootSpawners)
-                spawner.ReserveLootPosition(position);
-
-            Instantiate(prefab, position.position, position.rotation, position);
-        }
-
 
         private void ClearRooms()
         {
-            _lootSpawners.Clear();
-
             _mediumSpawned.ForEach(x => Destroy(x.gameObject));
             _mediumSpawned.Clear();
 
@@ -152,10 +101,13 @@ namespace GameAssembly.LootLocation.Generation
                 Quaternion.identity);
             GameInstaller.InjectGameObject(spawned.gameObject);
             var spawners = spawned.GetComponentsInChildren<RoomLootSpawner>();
-            _lootSpawners.AddRange(spawners);
 
             foreach (var spawner in spawners)
+            {
                 spawner.InitializeStoryLoot(_storyLootSystem, storyLootWeights);
+                spawner.InitializeBlueprintLoot(_blueprintLootSystem);
+                spawner.SpawnLoot();
+            }
 
             _currentSpawnOffset += roomDistance;
 

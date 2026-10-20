@@ -34,6 +34,7 @@ namespace GameAssembly.Core
             builder.Register<PlayerBank>(Lifetime.Scoped);
             builder.Register<StoryQuestSystem>(Lifetime.Scoped);
             builder.Register<StoryLootSystem>(Lifetime.Scoped);
+            builder.Register<BlueprintLootSystem>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
             builder.RegisterComponentInHierarchy<CraftView>();
