@@ -3814,7 +3814,7 @@ GameObject:
   - component: {fileID: 9124747933609207072}
   - component: {fileID: 3813585516147206477}
   m_Layer: 0
-  m_Name: W3_brick
+  m_Name: W3_2_5brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

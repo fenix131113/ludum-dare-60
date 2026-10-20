@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 8389023794199956923}
   - component: {fileID: 8327355651346941179}
   m_Layer: 0
-  m_Name: W5_brick_arch
+  m_Name: W5_A_brick_arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
