@@ -28,7 +28,7 @@ namespace GameAssembly.TraderSystem.View
                 
                 var spawned = Instantiate(cellShopPrefab, sellContent);
                 _shopCells.Add(spawned);
-                spawned.Initialize(item.Key.Icon,  item.Key.ItemName, item.Value, item.Key.Cost, "Sell");
+                spawned.Initialize(item.Key, item.Value, "Sell");
             }
         }
 

@@ -1,6 +1,8 @@
 ﻿using System;
 using GameAssembly.InventorySystem;
+using GameAssembly.ItemsSystem;
 using GameAssembly.ShelterSystem;
+using GameAssembly.ShelterSystem.CraftSystem;
 using VContainer;
 using VContainer.Unity;
 
@@ -10,6 +12,7 @@ namespace GameAssembly.Player
     {
         [Inject] private PlayerState _playerState;
         [Inject] private ShelterInventory _shelterInventory;
+        [Inject] private CraftView _craftView;
 
         public void Initialize()
         {
@@ -22,7 +25,15 @@ namespace GameAssembly.Player
                 return;
 
             foreach (var item in _items)
+            {
+                if (item.Key is BlueprintItemDataSO blueprint)
+                {
+                    _craftView.UnblockCraft(blueprint.Craft);
+                    continue;
+                }
+
                 _shelterInventory.AddItem(item.Key, item.Value);
+            }
             
             ClearInventory();
         }

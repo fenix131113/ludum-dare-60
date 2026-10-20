@@ -1,5 +1,6 @@
 ﻿using GameAssembly.LootLocation.Generation;
 using GameAssembly.Player;
+using GameAssembly.Player.Data;
 using UnityEngine;
 using VContainer;
 
@@ -11,10 +12,20 @@ namespace GameAssembly.ShelterSystem
         [Inject] private PlayerMovement _playerMovement;
         [Inject] private LocationGenerator _locationGenerator;
         [Inject] private PlayerCamera _playerCamera;
+        [Inject] private DayEndView _dayEndView;
         
-        public bool IsInteractable() => _playerState.IsInShelter();
+        public bool IsInteractable() => _playerState.IsInShelter() && !_dayEndView.IsOpen &&
+                                        _playerState.GetCurrentState() == PlayerInteractStates.FREE;
 
         public void Interact(object sender)
+        {
+            if (!IsInteractable())
+                return;
+
+            _dayEndView.OpenDayEnd(StartRaid);
+        }
+
+        private void StartRaid()
         {
             _playerState.SwitchShelterState(false);
             

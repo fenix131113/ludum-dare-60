@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58dd41a868ba4e0896bb1a5e38dbd026, type: 3}
+  m_Name: CrappyPistolCraft
+  m_EditorClassIdentifier: GameAssembly::GameAssembly.ShelterSystem.CraftSystem.CraftItemSO
+  <ItemData>k__BackingField: {fileID: 11400000, guid: caea428b4d1b5e79b6e81bd4373bde60, type: 2}
+  <CraftsRequirements>k__BackingField:
+  - <ItemData>k__BackingField: {fileID: 11400000, guid: 500306cf88ae57baab21fa760deb6544, type: 2}
+    <Count>k__BackingField: 1
+  - <ItemData>k__BackingField: {fileID: 11400000, guid: 9eee964c7107556884ad4ce0fd4266e7, type: 2}
+    <Count>k__BackingField: 1
+  - <ItemData>k__BackingField: {fileID: 11400000, guid: 390b432b3fe552f5ad38b4d330d8d9f5, type: 2}
+    <Count>k__BackingField: 2
