@@ -8717,9 +8717,26 @@ MonoBehaviour:
   craftsContent: {fileID: 292322458}
   craftCellPrefab: {fileID: 8713132587704871300, guid: 82a23445b25ce5645b544c1a91acfcac, type: 3}
   crafts:
-  - {fileID: 11400000, guid: 273a919b26986ba4db5e0544183b35cd, type: 2}
-  blockedCrafts:
-  - {fileID: 11400000, guid: 273a919b26986ba4db5e0544183b35cd, type: 2}
+  - {fileID: 11400000, guid: 550d7a49b07b552c90d4a93d9acbe56e, type: 2}
+  - {fileID: 11400000, guid: 7e0cf9b9899c59a89ca29d6effc087eb, type: 2}
+  - {fileID: 11400000, guid: 77c9358a39ef5489863034c2eb4607b1, type: 2}
+  - {fileID: 11400000, guid: a905c0e8dc77526ea281efb76871a1e7, type: 2}
+  - {fileID: 11400000, guid: 1395a891a5ce5c82922f7afd26eafb92, type: 2}
+  - {fileID: 11400000, guid: d1c0fbaead2e5c21aa9d6498589618c0, type: 2}
+  - {fileID: 11400000, guid: 13d504cddf2a5d5c9d47b21122ea230e, type: 2}
+  - {fileID: 11400000, guid: 3e1fc901afea51fda31d22b558df592d, type: 2}
+  - {fileID: 11400000, guid: 7c6afc48c0bb5d4c8dd2e55d21c97ad3, type: 2}
+  - {fileID: 11400000, guid: a096479662145c518c1803554f8fd2f7, type: 2}
+  - {fileID: 11400000, guid: 709bb2c8ea0b5dc8847296b0cd9253ec, type: 2}
+  - {fileID: 11400000, guid: a8139f700147511da378f9e11363284d, type: 2}
+  - {fileID: 11400000, guid: c08ab3e541dc579780a412bec79a6300, type: 2}
+  - {fileID: 11400000, guid: fa62e2c3a1e45427b2ffcfcf0d75392d, type: 2}
+  - {fileID: 11400000, guid: 45129ae9c30d5bbf97a18bd2246b597f, type: 2}
+  - {fileID: 11400000, guid: 4768345c36695271a5d3f8b4776ecc91, type: 2}
+  - {fileID: 11400000, guid: 5b569274610d5eac8bf14547a20b3a75, type: 2}
+  - {fileID: 11400000, guid: 5b4857ca8a8855bd90fc140c80c63643, type: 2}
+  - {fileID: 11400000, guid: 1e6e8370dbe8506da7f110ab15b0c701, type: 2}
+  blockedCrafts: []
   physicalGame: {fileID: 639718564}
 --- !u!114 &1357013113
 MonoBehaviour:
@@ -8734,7 +8751,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ShelterSystem.DayEndView
   events:
-  - {fileID: 11400000, guid: e6965cb3b1de81441806279a6d4e23bc, type: 2}
+  - {fileID: 11400000, guid: 9173e3aae27153179a09b54e4a581ea6, type: 2}
+  - {fileID: 11400000, guid: 7ae3ac0a5b195efcb795d261f80ab8a6, type: 2}
+  - {fileID: 11400000, guid: d5156bbe219e56d8b1c266448dea32b5, type: 2}
+  - {fileID: 11400000, guid: 7128c6b2292451879a0f87e2ef962b67, type: 2}
+  - {fileID: 11400000, guid: 7d2cbaaefc6d5c649ff7a98281a143a7, type: 2}
+  - {fileID: 11400000, guid: aaf76f0a72295964844d90acee131601, type: 2}
+  - {fileID: 11400000, guid: c138eb3b846559efb4f9309207d96354, type: 2}
+  - {fileID: 11400000, guid: a82281e23846505baa3ea025683c83bb, type: 2}
+  - {fileID: 11400000, guid: 5326d9b0efb05805ad6e5732080d5d12, type: 2}
+  - {fileID: 11400000, guid: d924081a228b5be9b38024684eeab78a, type: 2}
+  - {fileID: 11400000, guid: 0daf3eceebd356ca8c05e86463915e51, type: 2}
+  - {fileID: 11400000, guid: a7d7745734e352358d7d1cd7264e9aae, type: 2}
+  - {fileID: 11400000, guid: 0b2a5f74f56954d4ab62a5e24e249d12, type: 2}
+  - {fileID: 11400000, guid: 3f533e3b61ca5eda805bbcf8104dbbf5, type: 2}
+  - {fileID: 11400000, guid: 3a4c5ba64eb75fff904091c575553655, type: 2}
+  - {fileID: 11400000, guid: 2530956047565c6ba4f46bdfef3a86a1, type: 2}
   peacefulRaidsCount: 2
   eventPanel: {fileID: 213258154}
   titleLabel: {fileID: 910000043}
@@ -10150,7 +10182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1779254798
 Transform:
   m_ObjectHideFlags: 0

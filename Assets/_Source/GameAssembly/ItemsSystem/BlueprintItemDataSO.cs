@@ -7,6 +7,5 @@ namespace GameAssembly.ItemsSystem
     public class BlueprintItemDataSO : ItemDataSO
     {
         [field: SerializeField] public CraftItemSO Craft { get; private set; }
-        [field: SerializeField] public GameObject LootPrefab { get; private set; }
     }
 }
