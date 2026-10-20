@@ -107,6 +107,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
+    - _CustomRoughness_intencity: 1
     - _Cutoff: 0.5
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
@@ -116,15 +117,29 @@ Material:
     - _DrawOrder: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _Edge: 0.36
+    - _EdgeSoftness: 1
+    - _Edge_0_0_5: 0.4
+    - _Edge_0_5_1: 0.6
+    - _Edge_max_0_1: 0.6
+    - _Edge_min_0_0_5: -0.04
+    - _Edge_min_0_0_5_default_0_4: -0.04
+    - _Edge_min_0_1: 0.4
+    - _Edge_more_then_edge_min: 0.6
+    - _Edge_more_then_edge_min_: 0.6
+    - _Edge_more_then_edge_min_default_0_6: 0.6
     - _EnvironmentReflections: 1
+    - _Float_1: 1.52
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _Normal_intensity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RoughnessMaps_intencity: 1
     - _Roughness_intencity: 5.21
     - _ScreenSpaceReflections: 1
     - _ScreenSpaceReflectionsContributeTransparent: 1
@@ -134,11 +149,14 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _UseCustomRoughness: 0
+    - _UseEdgeSmoothness: 0
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     - _normal_intensity: 1
     m_Colors:
+    - _BC_correct: {r: 0.8207547, g: 0.7983489, b: 0.7471965, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
