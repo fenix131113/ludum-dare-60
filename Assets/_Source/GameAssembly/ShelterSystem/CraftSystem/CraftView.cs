@@ -30,6 +30,8 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         private readonly List<CraftCell> _craftCells = new();
         
         public IReadOnlyCollection<CraftItemSO> Crafts => crafts;
+
+        public bool IsCraftBlocked(CraftItemSO craft) => blockedCrafts.Contains(craft);
         
         public void UnblockCraft(CraftItemSO craft)
         {

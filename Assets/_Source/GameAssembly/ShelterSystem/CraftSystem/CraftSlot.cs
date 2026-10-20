@@ -85,7 +85,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         private void OnDrawGizmos()
         {
             var center = snapPoint ? snapPoint.position : transform.position;
-            Gizmos.color = IsCorrectlyFilled ? Color.green : (IsOccupied ? Color.yellow : Color.cyan);
+            Gizmos.color = IsCorrectlyFilled ? Color.green : IsOccupied ? Color.yellow : Color.cyan;
             Gizmos.DrawWireSphere(center, snapRadius);
 
 #if UNITY_EDITOR

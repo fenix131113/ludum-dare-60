@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using GameAssembly.Core;
+using GameAssembly.ItemsSystem;
+using GameAssembly.ShelterSystem.CraftSystem;
 using UnityEngine;
+using VContainer;
 
 namespace GameAssembly.LootLocation.Generation
 {
@@ -13,8 +16,13 @@ namespace GameAssembly.LootLocation.Generation
         [SerializeField] private Room[] transitionRoomsPrefabs;
         [SerializeField] private float roomDistance;
 
+        [SerializeField] private List<BlueprintItemDataSO> blueprints = new();
+
+        [Inject] private CraftView _craftView;
+
         private readonly List<Room> _mediumSpawned = new();
         private readonly List<Room> _transitionSpawned = new();
+        private readonly List<RoomLootSpawner> _lootSpawners = new();
         private Room _bigSpawned;
         private Room _startSpawned;
 
@@ -66,11 +74,50 @@ namespace GameAssembly.LootLocation.Generation
                 
                 _mediumSpawned[i].InitializeConnectedRooms(doorToMedium);
             }
+
+            SpawnBlueprint();
+        }
+
+        private void SpawnBlueprint()
+        {
+            var availableBlueprints = blueprints.FindAll(blueprint => blueprint && blueprint.Craft &&
+                blueprint.LootPrefab && _craftView.IsCraftBlocked(blueprint.Craft));
+
+            if (availableBlueprints.Count == 0)
+                return;
+
+            var positions = new List<Transform>();
+
+            foreach (var spawner in _lootSpawners)
+            {
+                foreach (var position in spawner.LootPositions)
+                {
+                    if (position && !positions.Contains(position))
+                        positions.Add(position);
+                }
+            }
+
+            if (positions.Count == 0)
+            {
+                Debug.LogWarning("[LocationGenerator] No loot positions available for a blueprint!");
+                return;
+            }
+
+            var selectedBlueprint = availableBlueprints[Random.Range(0, availableBlueprints.Count)];
+            var selectedPosition = positions[Random.Range(0, positions.Count)];
+
+            foreach (var spawner in _lootSpawners)
+                spawner.ReserveLootPosition(selectedPosition);
+
+            Instantiate(selectedBlueprint.LootPrefab, selectedPosition.position, selectedPosition.rotation,
+                selectedPosition);
         }
 
 
         private void ClearRooms()
         {
+            _lootSpawners.Clear();
+
             _mediumSpawned.ForEach(x => Destroy(x.gameObject));
             _mediumSpawned.Clear();
 
@@ -89,6 +136,7 @@ namespace GameAssembly.LootLocation.Generation
             var spawned = Instantiate(room, startRoomPoint.position + Vector3.forward * _currentSpawnOffset,
                 Quaternion.identity);
             GameInstaller.InjectGameObject(spawned.gameObject);
+            _lootSpawners.AddRange(spawned.GetComponentsInChildren<RoomLootSpawner>());
 
             _currentSpawnOffset += roomDistance;
 

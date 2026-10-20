@@ -9,8 +9,14 @@ namespace GameAssembly.LootLocation.Generation
 {
     public class RoomLootSpawner : MonoBehaviour
     {
-        [SerializeField] private List<Transform> lootPositions;
+        [SerializeField] private List<Transform> lootPositions = new();
         [SerializeField] private List<LootWeightData> lootWeights;
+
+        private readonly HashSet<Transform> _reservedLootPositions = new();
+
+        public IReadOnlyList<Transform> LootPositions => lootPositions;
+
+        public void ReserveLootPosition(Transform position) => _reservedLootPositions.Add(position);
 
         private void Start()
         {
@@ -24,7 +30,7 @@ namespace GameAssembly.LootLocation.Generation
 
             foreach (var positionData in lootPositions)
             {
-                if (!positionData)
+                if (!positionData || _reservedLootPositions.Contains(positionData))
                     continue;
 
                 var selectedLoot = GetRandomItemByWeight(lootWeights);
