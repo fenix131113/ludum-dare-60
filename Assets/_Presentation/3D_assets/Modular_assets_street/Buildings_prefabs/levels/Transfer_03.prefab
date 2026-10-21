@@ -4638,7 +4638,6 @@ GameObject:
   - component: {fileID: 2600160627148656189}
   - component: {fileID: 5604254561246383747}
   - component: {fileID: 5146703898414986204}
-  - component: {fileID: 481567542152820635}
   m_Layer: 0
   m_Name: Transfer_03
   m_TagString: Untagged
@@ -4822,20 +4821,6 @@ MonoBehaviour:
   - {fileID: 5132501586904822507}
   exitDoor: {fileID: 3931468865737202842}
   enterPoint: {fileID: 1186026517299581508}
---- !u!114 &481567542152820635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4633867208228129577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175be8d600854c7e8ec2647e247e1a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.RoomLootSpawner
-  lootPositions: []
-  lootWeights: []
 --- !u!1 &4695609046225910529
 GameObject:
   m_ObjectHideFlags: 0

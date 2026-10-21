@@ -2969,7 +2969,6 @@ GameObject:
   - component: {fileID: 552448007092813526}
   - component: {fileID: 2600160627148656189}
   - component: {fileID: 8542288447506547068}
-  - component: {fileID: 5338533608362159026}
   - component: {fileID: 1957371411908424541}
   m_Layer: 0
   m_Name: Transfer_02
@@ -3116,20 +3115,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.999999, y: 2.2204459e-16, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5338533608362159026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4633867208228129577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175be8d600854c7e8ec2647e247e1a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.RoomLootSpawner
-  lootPositions: []
-  lootWeights: []
 --- !u!114 &1957371411908424541
 MonoBehaviour:
   m_ObjectHideFlags: 0
