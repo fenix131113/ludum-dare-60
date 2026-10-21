@@ -40,6 +40,7 @@ namespace GameAssembly.Core
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
             builder.RegisterComponentInHierarchy<CraftView>();
+            builder.RegisterComponentInHierarchy<CraftItemTooltip>();
             builder.RegisterComponentInHierarchy<LootPhaseEnd>();
             builder.RegisterComponentInHierarchy<Player2DMovement>();
             builder.RegisterComponentInHierarchy<PlayerMovement>();

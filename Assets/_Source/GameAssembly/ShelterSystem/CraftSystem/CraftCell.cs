@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using VContainer;
 
 namespace GameAssembly.ShelterSystem.CraftSystem
 {
-    public class CraftCell : MonoBehaviour
+    public class CraftCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
     {
         [SerializeField] private RectTransform craftRequirementPrefab;
         [SerializeField] private RectTransform requirementsContent;
@@ -15,6 +16,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private TMP_Text nameLabel;
 
         [Inject] private ShelterInventory _inventory;
+        [Inject] private CraftItemTooltip _tooltip;
 
         private CraftItemSO _craft;
         private CraftView _view;
@@ -38,6 +40,23 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         private void Start()
         {
             craftButton.onClick.AddListener(OnCraftButtonClicked);
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (_craft)
+                _tooltip.Show(this, _craft.ItemData, eventData.position, eventData.enterEventCamera);
+        }
+
+        public void OnPointerMove(PointerEventData eventData) =>
+            _tooltip.Move(this, eventData.position, eventData.enterEventCamera);
+
+        public void OnPointerExit(PointerEventData eventData) => _tooltip.Hide(this);
+
+        private void OnDisable()
+        {
+            if (_tooltip != null)
+                _tooltip.Hide(this);
         }
 
         private void OnDestroy()
