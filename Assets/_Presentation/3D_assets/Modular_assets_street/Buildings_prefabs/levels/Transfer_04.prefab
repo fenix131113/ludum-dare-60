@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2163522628503158134}
   - component: {fileID: 8127176798742819817}
   - component: {fileID: 1041777767660857193}
+  - component: {fileID: 4641602427706633812}
   m_Layer: 0
   m_Name: underground_top.002 (12)
   m_TagString: Untagged
@@ -90,6 +91,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4641602427706633812
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237165729963279294}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &295844108408193509
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +124,7 @@ GameObject:
   - component: {fileID: 8004761557488663070}
   - component: {fileID: 7345986436556096972}
   - component: {fileID: 1229187916064123728}
+  - component: {fileID: 4909441001711699738}
   m_Layer: 0
   m_Name: underground_colonel (6)
   m_TagString: Untagged
@@ -181,6 +205,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4909441001711699738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295844108408193509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &366658516477760544
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +238,7 @@ GameObject:
   - component: {fileID: 5152373191253600651}
   - component: {fileID: 5099147751623210353}
   - component: {fileID: 6393825458793619981}
+  - component: {fileID: 1971823810936687829}
   m_Layer: 0
   m_Name: underground_colonel (10)
   m_TagString: Untagged
@@ -272,6 +319,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1971823810936687829
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366658516477760544}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &658756863433520906
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +352,7 @@ GameObject:
   - component: {fileID: 3384883739787606789}
   - component: {fileID: 9221583384989936553}
   - component: {fileID: 7696054146251702071}
+  - component: {fileID: 5721895454009471610}
   m_Layer: 0
   m_Name: underground_top.002 (33)
   m_TagString: Untagged
@@ -362,6 +432,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5721895454009471610
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658756863433520906}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &676596039655691413
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +465,7 @@ GameObject:
   - component: {fileID: 1977163416240393715}
   - component: {fileID: 6348012059965367679}
   - component: {fileID: 4689910387949036258}
+  - component: {fileID: 427929109362640822}
   m_Layer: 0
   m_Name: underground_top.002 (27)
   m_TagString: Untagged
@@ -452,6 +545,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &427929109362640822
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676596039655691413}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &715407234122482614
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +578,7 @@ GameObject:
   - component: {fileID: 723446013055841618}
   - component: {fileID: 4200812387783933008}
   - component: {fileID: 5091553643261075373}
+  - component: {fileID: 1720459985618084423}
   m_Layer: 0
   m_Name: underground_wall.001 (27)
   m_TagString: Untagged
@@ -543,6 +659,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1720459985618084423
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715407234122482614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &775931352736952356
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +692,7 @@ GameObject:
   - component: {fileID: 9055688475135546112}
   - component: {fileID: 5344956766664206573}
   - component: {fileID: 6323454665432068328}
+  - component: {fileID: 7602085839584501409}
   m_Layer: 0
   m_Name: Brick_wall_basement_DOOR
   m_TagString: Untagged
@@ -634,6 +773,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7602085839584501409
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775931352736952356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5314872032680454381, guid: 457dd73d2e391ef4b88a26044279838e, type: 3}
 --- !u!1 &841941016342523271
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +806,7 @@ GameObject:
   - component: {fileID: 546388584964979484}
   - component: {fileID: 2202438824900584817}
   - component: {fileID: 2003463302004392380}
+  - component: {fileID: 4815014454520636532}
   m_Layer: 0
   m_Name: underground_wall.001 (21)
   m_TagString: Untagged
@@ -725,6 +887,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4815014454520636532
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841941016342523271}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &886034603755176760
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +920,7 @@ GameObject:
   - component: {fileID: 528090965188660139}
   - component: {fileID: 517631532193070396}
   - component: {fileID: 8549401722601761405}
+  - component: {fileID: 785323625435943200}
   m_Layer: 0
   m_Name: underground_colonel (7)
   m_TagString: Untagged
@@ -816,6 +1001,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &785323625435943200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886034603755176760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &929933119595901104
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +1034,7 @@ GameObject:
   - component: {fileID: 7866316729304735680}
   - component: {fileID: 8536362376936118740}
   - component: {fileID: 1509709192665782274}
+  - component: {fileID: 1360455116087898722}
   m_Layer: 0
   m_Name: underground_wall.001 (14)
   m_TagString: Untagged
@@ -907,6 +1115,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1360455116087898722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929933119595901104}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &933614066598794780
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +1148,7 @@ GameObject:
   - component: {fileID: 1455876171430595361}
   - component: {fileID: 4153771254850671852}
   - component: {fileID: 7918763189626522932}
+  - component: {fileID: 3344482726445574511}
   m_Layer: 0
   m_Name: underground_top.002 (10)
   m_TagString: Untagged
@@ -997,6 +1228,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3344482726445574511
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933614066598794780}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1176202887768752968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1261,7 @@ GameObject:
   - component: {fileID: 2358902085098370046}
   - component: {fileID: 5751769751238859308}
   - component: {fileID: 1158123585668858428}
+  - component: {fileID: 2707329370534923664}
   m_Layer: 0
   m_Name: underground_top.001 (7)
   m_TagString: Untagged
@@ -1087,6 +1341,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2707329370534923664
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176202887768752968}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1249002319713930543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1374,7 @@ GameObject:
   - component: {fileID: 3226910398024054901}
   - component: {fileID: 5122243850899487004}
   - component: {fileID: 3396681434604754181}
+  - component: {fileID: 2954445093667141512}
   m_Layer: 0
   m_Name: underground_wall.001 (13)
   m_TagString: Untagged
@@ -1178,6 +1455,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2954445093667141512
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249002319713930543}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1302194844959764941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1488,7 @@ GameObject:
   - component: {fileID: 4087321671006107475}
   - component: {fileID: 8906883480895072370}
   - component: {fileID: 4497282837977927640}
+  - component: {fileID: 1817745271207802616}
   m_Layer: 0
   m_Name: underground_top.002 (38)
   m_TagString: Untagged
@@ -1268,6 +1568,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1817745271207802616
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302194844959764941}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1452157263938610683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1601,7 @@ GameObject:
   - component: {fileID: 5115941589733285409}
   - component: {fileID: 1725544585104313616}
   - component: {fileID: 6535181982900481538}
+  - component: {fileID: 3327869846322040147}
   m_Layer: 0
   m_Name: underground_top.002 (40)
   m_TagString: Untagged
@@ -1358,6 +1681,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3327869846322040147
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452157263938610683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1482432946351323533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1714,7 @@ GameObject:
   - component: {fileID: 4286078613400364124}
   - component: {fileID: 5653311318332573603}
   - component: {fileID: 7484762341974175058}
+  - component: {fileID: 6787364115982143642}
   m_Layer: 0
   m_Name: underground_top.002 (24)
   m_TagString: Untagged
@@ -1448,6 +1794,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6787364115982143642
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482432946351323533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &1803375182473004302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1918,7 @@ GameObject:
   - component: {fileID: 7041046872311774756}
   - component: {fileID: 2630740511053965054}
   - component: {fileID: 3345755973422284067}
+  - component: {fileID: 7419386215766775267}
   m_Layer: 0
   m_Name: underground_top.002 (37)
   m_TagString: Untagged
@@ -1629,6 +1998,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7419386215766775267
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026619134020083712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2201586461018911822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +2031,7 @@ GameObject:
   - component: {fileID: 6747379729938424280}
   - component: {fileID: 936926087219855781}
   - component: {fileID: 3493534249676003669}
+  - component: {fileID: 4008288949212843399}
   m_Layer: 0
   m_Name: underground_ugol (1)
   m_TagString: Untagged
@@ -1720,6 +2112,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4008288949212843399
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201586461018911822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7027615122223002549, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2236473292206208507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +2145,7 @@ GameObject:
   - component: {fileID: 6644342615683319502}
   - component: {fileID: 1041840627566495263}
   - component: {fileID: 1259379411937980208}
+  - component: {fileID: 5205642020763108191}
   m_Layer: 0
   m_Name: underground_wall.001 (19)
   m_TagString: Untagged
@@ -1811,6 +2226,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5205642020763108191
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236473292206208507}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2266891041451406065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +2259,7 @@ GameObject:
   - component: {fileID: 440571948980433615}
   - component: {fileID: 5176852077513544696}
   - component: {fileID: 2399327978237706873}
+  - component: {fileID: 3694245156095327037}
   m_Layer: 0
   m_Name: underground_top.002 (17)
   m_TagString: Untagged
@@ -1901,6 +2339,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3694245156095327037
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266891041451406065}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2320239118532735515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +2372,7 @@ GameObject:
   - component: {fileID: 4106169777223588477}
   - component: {fileID: 1727157758841240346}
   - component: {fileID: 8553255023722623033}
+  - component: {fileID: 9116746526563137969}
   m_Layer: 0
   m_Name: underground_wall.001 (22)
   m_TagString: Untagged
@@ -1992,6 +2453,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9116746526563137969
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320239118532735515}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2365156022956781105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2486,7 @@ GameObject:
   - component: {fileID: 352558132176742629}
   - component: {fileID: 7075338188501949321}
   - component: {fileID: 6908582494932478708}
+  - component: {fileID: 240751598526261154}
   m_Layer: 0
   m_Name: underground_top.001 (8)
   m_TagString: Untagged
@@ -2082,6 +2566,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &240751598526261154
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365156022956781105}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2506479380981441067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2599,7 @@ GameObject:
   - component: {fileID: 4964262338947527250}
   - component: {fileID: 4652488938953631753}
   - component: {fileID: 6851412614392308074}
+  - component: {fileID: 3648280787173996397}
   m_Layer: 0
   m_Name: underground_ugol (6)
   m_TagString: Untagged
@@ -2173,6 +2680,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3648280787173996397
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506479380981441067}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7027615122223002549, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2552420716352321349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2713,7 @@ GameObject:
   - component: {fileID: 3700539403354152889}
   - component: {fileID: 7333314411832153208}
   - component: {fileID: 8906948392791716290}
+  - component: {fileID: 4062192419347378708}
   m_Layer: 0
   m_Name: underground_wall.001 (18)
   m_TagString: Untagged
@@ -2264,6 +2794,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4062192419347378708
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552420716352321349}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2590347452981060549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2828,7 @@ GameObject:
   - component: {fileID: 6451296238752842561}
   - component: {fileID: 2841329232831859061}
   - component: {fileID: 8781864472964333572}
+  - component: {fileID: 4157358166220590961}
   m_Layer: 3
   m_Name: erewwer (1)
   m_TagString: Untagged
@@ -2295,7 +2848,8 @@ Transform:
   m_LocalPosition: {x: -5.351, y: 1.587, z: 0.192}
   m_LocalScale: {x: 1.4375063, y: 2.135989, z: 0.3036099}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8454306086809709269}
   m_Father: {fileID: 4912976321505605807}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6451296238752842561
@@ -2374,8 +2928,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
-  m_Center: {x: 0, y: 0, z: -0.000003814697}
+  m_Size: {x: 0.9999999, y: 0.9999999, z: 1.203657}
+  m_Center: {x: 9.715001e-17, y: 0, z: 0.101824775}
+--- !u!114 &4157358166220590961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590347452981060549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b781375698364c5590f47e092872d8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.Door
+  spawnPoint: {fileID: 8454306086809709269}
 --- !u!1 &2804653124464508778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2954,7 @@ GameObject:
   - component: {fileID: 2409052114821946907}
   - component: {fileID: 4251140733005407203}
   - component: {fileID: 8367851257978446267}
+  - component: {fileID: 2509077390554680255}
   m_Layer: 0
   m_Name: underground_ugol_inside (1)
   m_TagString: Untagged
@@ -2467,6 +3035,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2509077390554680255
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2804653124464508778}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6065374378435639302, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &2922250946700959699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +3160,7 @@ GameObject:
   - component: {fileID: 7121046441251721031}
   - component: {fileID: 8215945700265265353}
   - component: {fileID: 7263182598761729470}
+  - component: {fileID: 4149957353821242798}
   m_Layer: 3
   m_Name: erewwer
   m_TagString: Untagged
@@ -2589,7 +3180,8 @@ Transform:
   m_LocalPosition: {x: 1.5558996, y: 0.758, z: -4.884}
   m_LocalScale: {x: 1.0117584, y: 1.7428107, z: 0.3036099}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 509229506675212842}
   m_Father: {fileID: 4912976321505605807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7121046441251721031
@@ -2668,8 +3260,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
-  m_Center: {x: 0, y: 0, z: -0.000003814697}
+  m_Size: {x: 0.9999998, y: 0.9999999, z: 1.2805443}
+  m_Center: {x: 0, y: 0, z: 0.1402684}
+--- !u!114 &4149957353821242798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3079375306608779726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b781375698364c5590f47e092872d8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.Door
+  spawnPoint: {fileID: 509229506675212842}
 --- !u!1 &3573497819892498030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,6 +3286,7 @@ GameObject:
   - component: {fileID: 6161024393436650589}
   - component: {fileID: 1891114730878630835}
   - component: {fileID: 6055125758299709987}
+  - component: {fileID: 7587388056923200020}
   m_Layer: 0
   m_Name: underground_top.002 (29)
   m_TagString: Untagged
@@ -2760,6 +3366,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7587388056923200020
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573497819892498030}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &3617824345714764660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,6 +3399,7 @@ GameObject:
   - component: {fileID: 5376006988238124755}
   - component: {fileID: 4691633978471237218}
   - component: {fileID: 8046276608114277177}
+  - component: {fileID: 7117591131524083071}
   m_Layer: 0
   m_Name: underground_wall.001 (20)
   m_TagString: Untagged
@@ -2851,6 +3480,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7117591131524083071
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3617824345714764660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &3824621561716877276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +3513,7 @@ GameObject:
   - component: {fileID: 5670687758331533374}
   - component: {fileID: 1184734587678069185}
   - component: {fileID: 5144807702925633442}
+  - component: {fileID: 7040339138925858743}
   m_Layer: 0
   m_Name: underground_top.002 (20)
   m_TagString: Untagged
@@ -2941,6 +3593,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7040339138925858743
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824621561716877276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &4198589262139863025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,6 +3626,7 @@ GameObject:
   - component: {fileID: 2662038803923679257}
   - component: {fileID: 4604244034200624548}
   - component: {fileID: 3049759201601577846}
+  - component: {fileID: 5912206796176589760}
   m_Layer: 0
   m_Name: underground_wall.002 (11)
   m_TagString: Untagged
@@ -3032,6 +3707,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5912206796176589760
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198589262139863025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1195409706830099802, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &4377013870718387180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3043,6 +3740,7 @@ GameObject:
   - component: {fileID: 1932560745657627361}
   - component: {fileID: 112261040354892012}
   - component: {fileID: 6670864472443819245}
+  - component: {fileID: 2055076784817664933}
   m_Layer: 0
   m_Name: underground_colonel (3)
   m_TagString: Untagged
@@ -3123,6 +3821,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2055076784817664933
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377013870718387180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &4439337163866607430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,6 +3854,7 @@ GameObject:
   - component: {fileID: 4014668606754903471}
   - component: {fileID: 2665957421018433088}
   - component: {fileID: 5338639949819816191}
+  - component: {fileID: 5793242169296557525}
   m_Layer: 0
   m_Name: underground_top.002 (39)
   m_TagString: Untagged
@@ -3213,6 +3934,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5793242169296557525
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439337163866607430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &4633867208228129577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,7 +3967,8 @@ GameObject:
   - component: {fileID: 4912976321505605807}
   - component: {fileID: 552448007092813526}
   - component: {fileID: 2600160627148656189}
-  - component: {fileID: 4529448908182559179}
+  - component: {fileID: 1968261212219432712}
+  - component: {fileID: 4291008152390689956}
   m_Layer: 0
   m_Name: Transfer_04
   m_TagString: Untagged
@@ -3381,8 +4125,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4529448908182559179
-MeshCollider:
+--- !u!65 &1968261212219432712
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3399,10 +4143,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 3
+  m_Size: {x: 9.999999, y: 2.2204459e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4291008152390689956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633867208228129577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7d113a4b734c7db5763f073caa1485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.Room
+  doors:
+  - {fileID: 4157358166220590961}
+  exitDoor: {fileID: 4149957353821242798}
+  enterPoint: {fileID: 509229506675212842}
 --- !u!1 &4695609046225910529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,6 +4173,7 @@ GameObject:
   - component: {fileID: 3482263607775602006}
   - component: {fileID: 4267848846994713215}
   - component: {fileID: 4266189930392754566}
+  - component: {fileID: 6337417600714860222}
   m_Layer: 0
   m_Name: underground_ugol_inside (4)
   m_TagString: Untagged
@@ -3494,6 +4254,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6337417600714860222
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695609046225910529}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6065374378435639302, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &4775429787523471986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,6 +4287,7 @@ GameObject:
   - component: {fileID: 3447542474070310956}
   - component: {fileID: 3189368079116092142}
   - component: {fileID: 6563232364395068257}
+  - component: {fileID: 5005430563184599975}
   m_Layer: 0
   m_Name: underground_wall.002 (13)
   m_TagString: Untagged
@@ -3585,6 +4368,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5005430563184599975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775429787523471986}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1195409706830099802, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5000012091525911271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,6 +4401,7 @@ GameObject:
   - component: {fileID: 667849128558089126}
   - component: {fileID: 3358645578500323589}
   - component: {fileID: 8427310743015747619}
+  - component: {fileID: 1715553945926604758}
   m_Layer: 0
   m_Name: underground_top.002 (34)
   m_TagString: Untagged
@@ -3675,6 +4481,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1715553945926604758
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000012091525911271}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5039153892750670864
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +4514,7 @@ GameObject:
   - component: {fileID: 194327733281673658}
   - component: {fileID: 595299774474505817}
   - component: {fileID: 4174825187680595173}
+  - component: {fileID: 5031687193520720722}
   m_Layer: 0
   m_Name: underground_wall.001 (17)
   m_TagString: Untagged
@@ -3766,6 +4595,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5031687193520720722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039153892750670864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5074529867140401379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,6 +4628,7 @@ GameObject:
   - component: {fileID: 7009205689127225487}
   - component: {fileID: 4470831606422459930}
   - component: {fileID: 6626107548152092020}
+  - component: {fileID: 8779172357508071325}
   m_Layer: 0
   m_Name: underground_colonel (8)
   m_TagString: Untagged
@@ -3857,6 +4709,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8779172357508071325
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074529867140401379}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5137720150381333396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +4742,7 @@ GameObject:
   - component: {fileID: 1775621400465200634}
   - component: {fileID: 3416001910001285617}
   - component: {fileID: 6305721498247500740}
+  - component: {fileID: 5203495487979211008}
   m_Layer: 0
   m_Name: underground_top.002 (25)
   m_TagString: Untagged
@@ -3947,6 +4822,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5203495487979211008
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137720150381333396}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5783452824999241192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,6 +4855,7 @@ GameObject:
   - component: {fileID: 7311211795030748224}
   - component: {fileID: 7488532452080391654}
   - component: {fileID: 556580351668806778}
+  - component: {fileID: 8096308355712945013}
   m_Layer: 0
   m_Name: underground_top.002 (42)
   m_TagString: Untagged
@@ -4037,6 +4935,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8096308355712945013
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783452824999241192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5824844927791692634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4968,7 @@ GameObject:
   - component: {fileID: 1047107024591781530}
   - component: {fileID: 7107240523912593980}
   - component: {fileID: 524109803324461642}
+  - component: {fileID: 8310458812752348192}
   m_Layer: 0
   m_Name: underground_wall.001 (15)
   m_TagString: Untagged
@@ -4128,6 +5049,59 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8310458812752348192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824844927791692634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
+--- !u!1 &5865207842817321432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8454306086809709269}
+  m_Layer: 3
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8454306086809709269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5865207842817321432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0936, z: 2.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6875418432055733743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5967236154311598188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,6 +5113,7 @@ GameObject:
   - component: {fileID: 438232681989131108}
   - component: {fileID: 5152880083452179134}
   - component: {fileID: 2431352786132123586}
+  - component: {fileID: 7089155948539414290}
   m_Layer: 0
   m_Name: underground_top.001 (6)
   m_TagString: Untagged
@@ -4218,6 +5193,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7089155948539414290
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967236154311598188}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &5968887021150973817
 GameObject:
   m_ObjectHideFlags: 0
@@ -4229,6 +5226,7 @@ GameObject:
   - component: {fileID: 6617407719238460996}
   - component: {fileID: 7525689768630467560}
   - component: {fileID: 3506243466826378572}
+  - component: {fileID: 7180458892831681755}
   m_Layer: 0
   m_Name: underground_top.002 (18)
   m_TagString: Untagged
@@ -4308,6 +5306,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7180458892831681755
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968887021150973817}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6172513335358056982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +5339,7 @@ GameObject:
   - component: {fileID: 1979429579677535888}
   - component: {fileID: 450370557693813542}
   - component: {fileID: 956492537686186963}
+  - component: {fileID: 2924750401694484418}
   m_Layer: 0
   m_Name: underground_top.002 (19)
   m_TagString: Untagged
@@ -4398,6 +5419,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2924750401694484418
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172513335358056982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6316848923679948060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4409,6 +5452,7 @@ GameObject:
   - component: {fileID: 6702642322174223536}
   - component: {fileID: 1523726657143044727}
   - component: {fileID: 3223900588834635138}
+  - component: {fileID: 1087103452343237784}
   m_Layer: 0
   m_Name: underground_top.002 (22)
   m_TagString: Untagged
@@ -4488,6 +5532,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1087103452343237784
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6316848923679948060}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6355605457602672686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,6 +5565,7 @@ GameObject:
   - component: {fileID: 6337814836817392009}
   - component: {fileID: 1544240643882648996}
   - component: {fileID: 7408582489866012911}
+  - component: {fileID: 5429239690858616330}
   m_Layer: 0
   m_Name: underground_wall.001 (23)
   m_TagString: Untagged
@@ -4579,6 +5646,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5429239690858616330
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6355605457602672686}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6419312673512200982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,6 +5679,7 @@ GameObject:
   - component: {fileID: 409740196762515337}
   - component: {fileID: 5192564063028547773}
   - component: {fileID: 8833040480913515872}
+  - component: {fileID: 5715051368009999706}
   m_Layer: 0
   m_Name: underground_ugol (5)
   m_TagString: Untagged
@@ -4670,6 +5760,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5715051368009999706
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419312673512200982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7027615122223002549, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6568976166180482108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,6 +5793,7 @@ GameObject:
   - component: {fileID: 3739132381129222895}
   - component: {fileID: 1686908474704614540}
   - component: {fileID: 6963285588705007856}
+  - component: {fileID: 2436098736157704529}
   m_Layer: 0
   m_Name: underground_top.001 (5)
   m_TagString: Untagged
@@ -4760,6 +5873,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2436098736157704529
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568976166180482108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6713202100843642072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,6 +5906,7 @@ GameObject:
   - component: {fileID: 6975748970420224627}
   - component: {fileID: 5601273070698646397}
   - component: {fileID: 4762904461997071413}
+  - component: {fileID: 2649816971788320278}
   m_Layer: 0
   m_Name: underground_top.002 (36)
   m_TagString: Untagged
@@ -4850,6 +5986,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2649816971788320278
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713202100843642072}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6731503510306470654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +6019,7 @@ GameObject:
   - component: {fileID: 8797441674688357790}
   - component: {fileID: 2719310488424053624}
   - component: {fileID: 2021062407159803655}
+  - component: {fileID: 9119917584501711603}
   m_Layer: 0
   m_Name: underground_top.002 (35)
   m_TagString: Untagged
@@ -4940,6 +6099,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9119917584501711603
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731503510306470654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6811364411421986652
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,6 +6132,7 @@ GameObject:
   - component: {fileID: 3996601160766011003}
   - component: {fileID: 6354345683928002189}
   - component: {fileID: 1683099055267156434}
+  - component: {fileID: 9077720434945690697}
   m_Layer: 0
   m_Name: underground_top.001 (10)
   m_TagString: Untagged
@@ -5030,6 +6212,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9077720434945690697
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811364411421986652}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &6839578739045632267
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,6 +6245,7 @@ GameObject:
   - component: {fileID: 5291116845739062030}
   - component: {fileID: 5887567375032116537}
   - component: {fileID: 6640593700078365825}
+  - component: {fileID: 7132811542867961436}
   m_Layer: 0
   m_Name: underground_wall.001 (16)
   m_TagString: Untagged
@@ -5121,6 +6326,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7132811542867961436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839578739045632267}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7018659704575208815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,6 +6359,7 @@ GameObject:
   - component: {fileID: 8072117444451428394}
   - component: {fileID: 7363402480713015543}
   - component: {fileID: 5628315718361741570}
+  - component: {fileID: 3458730123761364333}
   m_Layer: 0
   m_Name: underground_top.002 (31)
   m_TagString: Untagged
@@ -5211,6 +6439,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3458730123761364333
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018659704575208815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7362031673492398682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,6 +6472,7 @@ GameObject:
   - component: {fileID: 2005525783368372082}
   - component: {fileID: 4512038199238852077}
   - component: {fileID: 3279118310402996967}
+  - component: {fileID: 1994552717984195498}
   m_Layer: 0
   m_Name: underground_colonel (9)
   m_TagString: Untagged
@@ -5302,6 +6553,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1994552717984195498
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362031673492398682}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7625648545461863436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,6 +6586,7 @@ GameObject:
   - component: {fileID: 5253211461569689394}
   - component: {fileID: 3174807926059554197}
   - component: {fileID: 1726812132218051863}
+  - component: {fileID: 1336277542264798548}
   m_Layer: 0
   m_Name: underground_top.001 (9)
   m_TagString: Untagged
@@ -5392,6 +6666,59 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1336277542264798548
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625648545461863436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
+--- !u!1 &7683428749052778620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509229506675212842}
+  m_Layer: 3
+  m_Name: ExitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &509229506675212842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7683428749052778620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.1109, z: 2.774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4221556489455185072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7684043778439514971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,6 +6730,7 @@ GameObject:
   - component: {fileID: 6051689219681222977}
   - component: {fileID: 5031058975550277705}
   - component: {fileID: 367627884535687543}
+  - component: {fileID: 2676406563815948770}
   m_Layer: 0
   m_Name: underground_top.002 (28)
   m_TagString: Untagged
@@ -5482,6 +6810,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2676406563815948770
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7684043778439514971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7742800752183666519
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +6843,7 @@ GameObject:
   - component: {fileID: 2617830663393736274}
   - component: {fileID: 2382484753752629352}
   - component: {fileID: 3557365586904726200}
+  - component: {fileID: 6600579990086505652}
   m_Layer: 0
   m_Name: underground_wall.001 (25)
   m_TagString: Untagged
@@ -5573,6 +6924,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6600579990086505652
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742800752183666519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7808872695767202644
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,6 +6957,7 @@ GameObject:
   - component: {fileID: 3749009095517485482}
   - component: {fileID: 6900347190070713410}
   - component: {fileID: 4517908318458966456}
+  - component: {fileID: 4936680461499696897}
   m_Layer: 0
   m_Name: underground_top.002 (32)
   m_TagString: Untagged
@@ -5663,6 +7037,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4936680461499696897
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808872695767202644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &7902692365286862717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5674,6 +7070,7 @@ GameObject:
   - component: {fileID: 6878208571763706070}
   - component: {fileID: 9125080989120148222}
   - component: {fileID: 7662443850690481905}
+  - component: {fileID: 1195177000781385362}
   m_Layer: 0
   m_Name: underground_top.002 (23)
   m_TagString: Untagged
@@ -5753,6 +7150,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1195177000781385362
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902692365286862717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8069526181205362915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +7183,7 @@ GameObject:
   - component: {fileID: 5452399987794529239}
   - component: {fileID: 1664882587577235764}
   - component: {fileID: 7239249541404396720}
+  - component: {fileID: 183893739178238120}
   m_Layer: 0
   m_Name: underground_colonel (11)
   m_TagString: Untagged
@@ -5844,6 +7264,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &183893739178238120
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8069526181205362915}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8169071768725478451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +7297,7 @@ GameObject:
   - component: {fileID: 9050144665375830201}
   - component: {fileID: 1925694837572262496}
   - component: {fileID: 4249477185729038754}
+  - component: {fileID: 7333835257575527917}
   m_Layer: 0
   m_Name: underground_top.002 (26)
   m_TagString: Untagged
@@ -5934,6 +7377,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7333835257575527917
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169071768725478451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8237817346042268840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5945,6 +7410,7 @@ GameObject:
   - component: {fileID: 4508092950661748015}
   - component: {fileID: 4345725197819827943}
   - component: {fileID: 3672752562013965347}
+  - component: {fileID: 7042441796681395003}
   m_Layer: 0
   m_Name: underground_wall.001 (12)
   m_TagString: Untagged
@@ -6025,6 +7491,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7042441796681395003
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237817346042268840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8263255457370024664
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,6 +7524,7 @@ GameObject:
   - component: {fileID: 5171911324097651169}
   - component: {fileID: 1713846370451765754}
   - component: {fileID: 8890703808151138470}
+  - component: {fileID: 9217334315635347737}
   m_Layer: 0
   m_Name: underground_top.002 (30)
   m_TagString: Untagged
@@ -6115,6 +7604,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9217334315635347737
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8263255457370024664}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8362943370312352436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +7637,7 @@ GameObject:
   - component: {fileID: 4626333976837864738}
   - component: {fileID: 1736939641376489587}
   - component: {fileID: 5769060258037310003}
+  - component: {fileID: 8211267167009607789}
   m_Layer: 0
   m_Name: underground_top.001 (11)
   m_TagString: Untagged
@@ -6205,6 +7717,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8211267167009607789
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362943370312352436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3428130972344249350, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8368321051752678872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,6 +7750,7 @@ GameObject:
   - component: {fileID: 6236835209910470116}
   - component: {fileID: 3199363436811581129}
   - component: {fileID: 9022090616416792122}
+  - component: {fileID: 5657792303016121982}
   m_Layer: 0
   m_Name: underground_colonel (4)
   m_TagString: Untagged
@@ -6296,6 +7831,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5657792303016121982
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368321051752678872}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4341583475567441272, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8368483686511637829
 GameObject:
   m_ObjectHideFlags: 0
@@ -6307,6 +7864,7 @@ GameObject:
   - component: {fileID: 7000394573664289983}
   - component: {fileID: 615300166261815092}
   - component: {fileID: 1305044089320664239}
+  - component: {fileID: 3905806323841900598}
   m_Layer: 0
   m_Name: underground_top.002 (21)
   m_TagString: Untagged
@@ -6386,6 +7944,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3905806323841900598
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368483686511637829}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8735989974720875916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6397,6 +7977,7 @@ GameObject:
   - component: {fileID: 1248472035352745477}
   - component: {fileID: 709251261211854872}
   - component: {fileID: 2588397043245513379}
+  - component: {fileID: 5297519517904105887}
   m_Layer: 0
   m_Name: underground_top.002 (41)
   m_TagString: Untagged
@@ -6476,6 +8057,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5297519517904105887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735989974720875916}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6661302196877817515, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8797697623420719235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,6 +8090,7 @@ GameObject:
   - component: {fileID: 395420782123845666}
   - component: {fileID: 8072615577879718355}
   - component: {fileID: 1502454293771803929}
+  - component: {fileID: 1243897406538386033}
   m_Layer: 0
   m_Name: underground_wall.001 (24)
   m_TagString: Untagged
@@ -6567,6 +8171,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1243897406538386033
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797697623420719235}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &8943147233008528936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6578,6 +8204,7 @@ GameObject:
   - component: {fileID: 5837912445987557000}
   - component: {fileID: 8926230473756945128}
   - component: {fileID: 7604644663738133616}
+  - component: {fileID: 3659956486522877728}
   m_Layer: 0
   m_Name: Brick_wall_door_stone.002
   m_TagString: Untagged
@@ -6657,6 +8284,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3659956486522877728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943147233008528936}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5395437602430387641, guid: 457dd73d2e391ef4b88a26044279838e, type: 3}
 --- !u!1 &8956221076549334089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6668,6 +8317,7 @@ GameObject:
   - component: {fileID: 2484835948922479506}
   - component: {fileID: 8635781547719324574}
   - component: {fileID: 5251521432276248022}
+  - component: {fileID: 7636926335824744977}
   m_Layer: 0
   m_Name: underground_wall.001 (26)
   m_TagString: Untagged
@@ -6748,6 +8398,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7636926335824744977
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956221076549334089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2787088463266290698, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1 &9028623114699597667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,6 +8431,7 @@ GameObject:
   - component: {fileID: 7469939203519708016}
   - component: {fileID: 5924711150728159165}
   - component: {fileID: 2025177192009523941}
+  - component: {fileID: 6384928763132235485}
   m_Layer: 0
   m_Name: underground_ugol (4)
   m_TagString: Untagged
@@ -6839,6 +8512,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6384928763132235485
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028623114699597667}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7027615122223002549, guid: 07e95d677fd1b2f4aaad176596709384, type: 3}
 --- !u!1001 &220095921132334951
 PrefabInstance:
   m_ObjectHideFlags: 0
