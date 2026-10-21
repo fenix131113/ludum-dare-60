@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: NotCHEESE
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "notCHEESE"
+  <ItemName>k__BackingField: notCHEESE
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: "Bypasses pipe minigame"
+  <Description>k__BackingField: Bypasses pipe minigame
   <LootPrefab>k__BackingField: {fileID: 0}

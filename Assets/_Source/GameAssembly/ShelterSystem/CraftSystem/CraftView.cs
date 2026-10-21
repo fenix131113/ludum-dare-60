@@ -23,6 +23,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [Inject] private PlayerCamera _playerCamera;
         [Inject] private PlayerInput _input;
         [Inject] private CraftPhysicalGame _craftPhysicalGame;
+        [Inject] private CraftItemTooltip _tooltip;
 
         private bool _isCrafting;
         private CraftItemSO _currentCraft;
@@ -49,6 +50,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
         public void StartCrafting(CraftItemSO craft)
         {
+            _tooltip.Hide();
             craftsPanel.SetActive(false);
             _isCrafting = true;
             _currentCraft = craft;
@@ -91,6 +93,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
         public void CloseCraftMenu()
         {
+            _tooltip.Hide();
             craftsPanel.SetActive(false);
             _input.OnInteractPerformed -= OnInteractionClicked;
             _playerState.SetCurrentInteractionState(PlayerInteractStates.FREE);
@@ -99,6 +102,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         
         public void Redraw()
         {
+            _tooltip.Hide();
             _craftCells.ForEach(x => Destroy(x.gameObject));
             _craftCells.Clear();
             

@@ -39,7 +39,12 @@ namespace GameAssembly.Player._2D
             rb.angularVelocity = Vector3.zero;
 
             if (!_playerState.IsInTwoD())
+            {
+                if (_scrollZone)
+                    _scrollZone.ResetScroll();
+
                 _scrollZone = null;
+            }
         }
 
         private void OnDestroy()

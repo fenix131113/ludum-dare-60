@@ -23,6 +23,7 @@ namespace GameAssembly.Player
         [Inject] private PlayerSettings _playerSettings;
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerInput _playerInput;
+        [Inject] private PlayerStamina _playerStamina;
 
         private void Awake()
         {
@@ -43,23 +44,28 @@ namespace GameAssembly.Player
         {
             if (_playerState.IsInTwoD())
             {
+                _playerStamina.Tick(false, Time.fixedDeltaTime);
                 _wallNormals.Clear();
                 rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
                 return;
             }
 
-            var currentSpeed = _playerSettings.Speed;
-            
-            if(_playerInput.IsSprintPressed())
-                currentSpeed = _playerSettings.SprintSpeed;
-            
             var canMove = _playerState.GetCurrentState() == PlayerInteractStates.FREE ||
                           _playerState.GetCurrentState() == PlayerInteractStates.MOVEMENT_ONLY;
-            var moveVector = canMove ? _playerInput.ReadMovementVector() * currentSpeed : Vector2.zero;
+            var inputVector = canMove ? _playerInput.ReadMovementVector() : Vector2.zero;
+            var isSprinting = inputVector.sqrMagnitude > 0.001f && _playerInput.IsSprintPressed() &&
+                              _playerStamina.CanSprint;
+            var currentSpeed = isSprinting ? _playerSettings.SprintSpeed : _playerSettings.Speed;
+
+            if (_playerState.IsInShelter())
+                currentSpeed *= _playerSettings.ShelterSpeedMultiplier;
+
+            var moveVector = inputVector * currentSpeed;
 
             var cameraYRotation = Quaternion.Euler(0f, _playerCamera.transform.eulerAngles.y, 0f);
             var worldMove = cameraYRotation * new Vector3(moveVector.x, 0f, moveVector.y);
             worldMove = RemoveMovementIntoWalls(worldMove);
+            _playerStamina.Tick(isSprinting && worldMove.sqrMagnitude > 0.001f, Time.fixedDeltaTime);
             if (TryGetGroundNormal(out var groundNormal))
             {
                 var groundMove = Vector3.ProjectOnPlane(worldMove, groundNormal).normalized * worldMove.magnitude;

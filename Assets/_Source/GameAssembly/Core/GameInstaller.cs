@@ -4,6 +4,7 @@ using GameAssembly.Player;
 using GameAssembly.Player._2D;
 using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
+using GameAssembly.Player.View;
 using GameAssembly.ShelterSystem;
 using GameAssembly.ShelterSystem.CraftSystem;
 using GameAssembly.TraderSystem;
@@ -32,15 +33,18 @@ namespace GameAssembly.Core
             builder.Register<InputSystem_Actions>(Lifetime.Scoped);
             builder.Register<ShelterInventory>(Lifetime.Scoped);
             builder.Register<PlayerBank>(Lifetime.Scoped);
+            builder.Register<PlayerStamina>(Lifetime.Scoped);
             builder.Register<StoryQuestSystem>(Lifetime.Scoped);
             builder.Register<StoryLootSystem>(Lifetime.Scoped);
             builder.Register<BlueprintLootSystem>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
             builder.RegisterComponentInHierarchy<CraftView>();
+            builder.RegisterComponentInHierarchy<CraftItemTooltip>();
             builder.RegisterComponentInHierarchy<LootPhaseEnd>();
             builder.RegisterComponentInHierarchy<Player2DMovement>();
             builder.RegisterComponentInHierarchy<PlayerMovement>();
+            builder.RegisterComponentInHierarchy<PlayerStaminaView>();
             builder.RegisterComponentInHierarchy<LocationGenerator>();
             builder.RegisterComponentInHierarchy<TraderView>();
             builder.RegisterComponentInHierarchy<SellMinigame>();
