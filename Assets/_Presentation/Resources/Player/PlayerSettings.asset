@@ -16,3 +16,8 @@ MonoBehaviour:
   <SprintSpeed>k__BackingField: 7
   <RayLenght>k__BackingField: 2
   <TwoDSpeed>k__BackingField: 0.75
+  <ShelterSpeedMultiplier>k__BackingField: 0.65
+  <SprintDuration>k__BackingField: 5
+  <StaminaRecoveryDuration>k__BackingField: 4
+  <StaminaRecoveryDelay>k__BackingField: 1
+  <SprintResumeThreshold>k__BackingField: 0.25
