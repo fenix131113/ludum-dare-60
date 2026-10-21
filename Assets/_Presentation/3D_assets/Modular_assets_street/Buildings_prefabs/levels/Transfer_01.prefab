@@ -4276,7 +4276,6 @@ GameObject:
   - component: {fileID: 2600160627148656189}
   - component: {fileID: 1432772788040442791}
   - component: {fileID: 8655002009479202422}
-  - component: {fileID: 2274294240344458706}
   m_Layer: 0
   m_Name: Transfer_01
   m_TagString: Untagged
@@ -4409,34 +4408,6 @@ MonoBehaviour:
   - {fileID: 6766901966262274968}
   exitDoor: {fileID: 8181565402744961199}
   enterPoint: {fileID: 3007139043910760183}
---- !u!114 &2274294240344458706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4633867208228129577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175be8d600854c7e8ec2647e247e1a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.RoomLootSpawner
-  lootPositions: []
-  lootWeights:
-  - item: {fileID: 11400000, guid: 855f913525d85f599a1ae08d074bd82c, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: c81cb72f193851a9a4efc887df7142a8, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: fb8e603a21e951b49b6412dc973edebe, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: 43c9f48ac314549095ee7736dcbb9b3e, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: 9eee964c7107556884ad4ce0fd4266e7, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: 03b82be583505755acd004ebd715d9f5, type: 2}
-    weight: 1
-  - item: {fileID: 11400000, guid: 6a8a4dcc66815152bc5d2b67d1cae948, type: 2}
-    weight: 1
 --- !u!1 &4775429787523471986
 GameObject:
   m_ObjectHideFlags: 0
