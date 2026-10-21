@@ -19,33 +19,41 @@ namespace GameAssembly.Player
         private Vector3 _startLocalPosition;
         private float _rotationX;
         private float _rotationY;
+        private float _rotationZ;
         private float _currentTiltZ;
         private Vector2 _cameraVector;
+
+        public float Sensitivity => sensitivity;
+
+        public void SetSensitivity(float value) => sensitivity = Mathf.Max(0.01f, value);
 
         public void ResetCameraToStartPosition() => transform.localPosition = _startLocalPosition;
         
         public void SetRotation(Quaternion targetRotation)
         {
-            var euler = targetRotation.eulerAngles;
+            var parent = cam.transform.parent;
+            var localRotation = parent ? Quaternion.Inverse(parent.rotation) * targetRotation : targetRotation;
+            var euler = localRotation.eulerAngles;
             
             _rotationX = Mathf.DeltaAngle(0, euler.x);
             _rotationY = Mathf.DeltaAngle(0, euler.y);
+            _rotationZ = euler.z;
             
             _currentTiltZ = 0f;
             
-            cam.transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0f);
-            //transform.rotation = targetRotation;
+            cam.transform.localRotation = localRotation;
         }
         
         public void ClearZRotation()
         {
             _currentTiltZ = 0;
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, 0f);
+            cam.transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, _rotationZ);
         }
 
         private void Start()
         {
             _startLocalPosition = transform.localPosition;
+            SetRotation(cam.transform.rotation);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
@@ -66,7 +74,7 @@ namespace GameAssembly.Player
             _rotationY += _cameraVector.x * sensitivity;
 
             cam.transform.localRotation =
-                Quaternion.Euler(_rotationX, _rotationY, cam.transform.localRotation.eulerAngles.z);
+                Quaternion.Euler(_rotationX, _rotationY, _rotationZ + _currentTiltZ);
 
             if (!_playerState.IsInTwoD())
                 CameraTilt();
@@ -83,8 +91,7 @@ namespace GameAssembly.Player
             var targetTilt = -moveVector.x * maxZTilt;
             _currentTiltZ = Mathf.MoveTowards(_currentTiltZ, targetTilt, tiltStep * Time.deltaTime);
 
-            var currentEuler = cam.transform.localEulerAngles;
-            cam.transform.localRotation = Quaternion.Euler(currentEuler.x, currentEuler.y, _currentTiltZ);
+            cam.transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, _rotationZ + _currentTiltZ);
         }
 
         private void OnPlayerDimensionChanged()

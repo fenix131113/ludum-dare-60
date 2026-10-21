@@ -15,4 +15,4 @@ MonoBehaviour:
   <Speed>k__BackingField: 5
   <SprintSpeed>k__BackingField: 7
   <RayLenght>k__BackingField: 2
-  <TwoDSpeed>k__BackingField: 2
+  <TwoDSpeed>k__BackingField: 0.75

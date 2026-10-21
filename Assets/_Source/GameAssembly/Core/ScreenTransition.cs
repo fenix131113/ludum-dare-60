@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using GameAssembly.Player;
-using GameAssembly.Player.Data;
 using UnityEngine;
 using VContainer;
 
@@ -13,9 +12,6 @@ namespace GameAssembly.Core
         [SerializeField, Min(0f)] private float fadeDuration = 0.5f;
 
         [Inject] private PlayerState _playerState;
-
-        private PlayerInteractStates _previousState;
-        private bool _wasSecondInteractionBlocked;
 
         public bool IsTransitioning { get; private set; }
 
@@ -40,10 +36,7 @@ namespace GameAssembly.Core
             }
 
             IsTransitioning = true;
-            _previousState = _playerState.GetCurrentState();
-            _wasSecondInteractionBlocked = _playerState.IsSecondInteractionBlocked();
-            _playerState.ChangeBlockSecondInteraction(true);
-            _playerState.SetCurrentInteractionState(PlayerInteractStates.LOCKED);
+            _playerState.LockControls(this);
             fadeGroup.transform.SetAsLastSibling();
             fadeGroup.blocksRaycasts = true;
             StartCoroutine(PlayTransition(onScreenBlack));
@@ -90,8 +83,7 @@ namespace GameAssembly.Core
             }
 
             IsTransitioning = false;
-            _playerState.ChangeBlockSecondInteraction(_wasSecondInteractionBlocked);
-            _playerState.SetCurrentInteractionState(_previousState);
+            _playerState.UnlockControls(this);
         }
 
         private void OnDisable()

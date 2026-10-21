@@ -213,6 +213,16 @@ namespace GameAssembly.Player.Input
                     ""interactions"": """",
                     ""initialStateCheck"": true,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""64b3c14e-392b-4b84-8d13-f051ab2b4eb6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -633,6 +643,17 @@ namespace GameAssembly.Player.Input
                     ""action"": ""Scroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c356e770-180a-4670-b575-91fe3fb645f1"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -714,6 +735,7 @@ namespace GameAssembly.Player.Input
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
             m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
             m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
+            m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         }
 
         ~@InputSystem_Actions()
@@ -806,6 +828,7 @@ namespace GameAssembly.Player.Input
         private readonly InputAction m_Player_Sprint;
         private readonly InputAction m_Player_Inventory;
         private readonly InputAction m_Player_Scroll;
+        private readonly InputAction m_Player_Menu;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -865,6 +888,10 @@ namespace GameAssembly.Player.Input
             /// Provides access to the underlying input action "Player/Scroll".
             /// </summary>
             public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Menu".
+            /// </summary>
+            public InputAction @Menu => m_Wrapper.m_Player_Menu;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -927,6 +954,9 @@ namespace GameAssembly.Player.Input
                 @Scroll.started += instance.OnScroll;
                 @Scroll.performed += instance.OnScroll;
                 @Scroll.canceled += instance.OnScroll;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
 
             /// <summary>
@@ -974,6 +1004,9 @@ namespace GameAssembly.Player.Input
                 @Scroll.started -= instance.OnScroll;
                 @Scroll.performed -= instance.OnScroll;
                 @Scroll.canceled -= instance.OnScroll;
+                @Menu.started -= instance.OnMenu;
+                @Menu.performed -= instance.OnMenu;
+                @Menu.canceled -= instance.OnMenu;
             }
 
             /// <summary>
@@ -1163,6 +1196,13 @@ namespace GameAssembly.Player.Input
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnScroll(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Menu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnMenu(InputAction.CallbackContext context);
         }
     }
 }

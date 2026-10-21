@@ -1,4 +1,6 @@
 ﻿using System;
+using GameAssembly.Player;
+using VContainer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +17,8 @@ namespace GameAssembly.ItemsSystem.Minigames.PaperMinigame
         [SerializeField] private float windSpeed = 3f;
         [SerializeField] private int dodgesBeforeRest = 4;
         [SerializeField] private float restDuration = 2.5f;
+
+        [Inject] private PlayerState _playerState;
 
         public event Action OnPaperCaught;
 
@@ -51,7 +55,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PaperMinigame
 
         private void Update()
         {
-            if (Mouse.current == null) return;
+            if (Mouse.current == null || _playerState.IsMenuOpen()) return;
 
             if (_isResting)
             {

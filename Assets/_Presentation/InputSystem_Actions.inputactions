@@ -125,6 +125,16 @@
                     "interactions": "",
                     "initialStateCheck": true,
                     "priority": 0
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "64b3c14e-392b-4b84-8d13-f051ab2b4eb6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -543,6 +553,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c356e770-180a-4670-b575-91fe3fb645f1",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

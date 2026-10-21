@@ -24,7 +24,7 @@ namespace GameAssembly.Player._2D
 
         private void Update()
         {
-            if (!_playerState.IsInTwoD() || _currentInteractions.Count == 0)
+            if (!_playerState.IsInTwoD() || _playerState.IsSecondInteractionBlocked() || _currentInteractions.Count == 0)
             {
                 ClearCurrentTarget();
                 return;

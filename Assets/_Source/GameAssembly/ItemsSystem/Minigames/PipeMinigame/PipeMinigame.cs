@@ -105,7 +105,7 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
             if (device is not Keyboard)
                 return;
             
-            if (!_isPlaying || !_canAcceptInput)
+            if (!_isPlaying || !_canAcceptInput || _playerState.IsMenuOpen())
                 return;
 
             if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())

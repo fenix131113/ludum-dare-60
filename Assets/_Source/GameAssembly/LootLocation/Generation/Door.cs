@@ -32,8 +32,12 @@ namespace GameAssembly.LootLocation.Generation
 
             _screenTransition.Transition(() =>
             {
-                _playerMovement.Teleport(_pointToTeleport.position);
-                _playerCamera.SetRotation(_pointToTeleport.rotation);
+                var parent = _pointToTeleport.parent;
+                var worldPosition = parent ? parent.TransformPoint(_pointToTeleport.localPosition) : _pointToTeleport.localPosition;
+                var worldRotation = parent ? parent.rotation * _pointToTeleport.localRotation : _pointToTeleport.localRotation;
+
+                _playerMovement.Teleport(worldPosition);
+                _playerCamera.SetRotation(worldRotation);
             });
         }
     }

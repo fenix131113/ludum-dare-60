@@ -50,8 +50,6 @@ namespace GameAssembly.ShelterSystem
         private bool _isOpen;
         private bool _isResolving;
         private bool _isGameOver;
-        private bool _wasSecondInteractionBlocked;
-        private PlayerInteractStates _previousState;
         private DayEventSO _currentEvent;
         private Action _onDayEnded;
 
@@ -103,14 +101,11 @@ namespace GameAssembly.ShelterSystem
             }
 
             _onDayEnded = onDayEnded;
-            _previousState = _playerState.GetCurrentState();
-            _wasSecondInteractionBlocked = _playerState.IsSecondInteractionBlocked();
             _isOpen = true;
             _isResolving = false;
             _isGameOver = false;
 
-            _playerState.ChangeBlockSecondInteraction(true);
-            _playerState.SetCurrentInteractionState(PlayerInteractStates.LOCKED);
+            _playerState.LockControls(this);
             gameOverPanel.SetActive(false);
             eventPanel.SetActive(true);
             Redraw();
@@ -151,8 +146,7 @@ namespace GameAssembly.ShelterSystem
             _startedRaidsCount++;
             _isOpen = false;
             eventPanel.SetActive(false);
-            _playerState.ChangeBlockSecondInteraction(_wasSecondInteractionBlocked);
-            _playerState.SetCurrentInteractionState(_previousState);
+            _playerState.UnlockControls(this);
 
             var onDayEnded = _onDayEnded;
             _onDayEnded = null;
@@ -189,6 +183,8 @@ namespace GameAssembly.ShelterSystem
 
         private void OnDestroy()
         {
+            _playerState?.UnlockControls(this);
+
             if (executeButton)
                 executeButton.onClick.RemoveListener(OnExecuteClicked);
 

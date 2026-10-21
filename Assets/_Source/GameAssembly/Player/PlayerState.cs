@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
 using UnityEngine;
@@ -19,10 +20,14 @@ namespace GameAssembly.Player
         private bool _isInTwoD;
         private bool _isSecondInteractionBlocked;
         private bool _isInShelter = true;
+        private bool _isMenuOpen;
+        private readonly HashSet<object> _controlLocks = new();
 
-        public PlayerInteractStates GetCurrentState() => _currentState;
+        public PlayerInteractStates GetCurrentState() => _isMenuOpen || _isInTwoD || _controlLocks.Count > 0
+            ? PlayerInteractStates.LOCKED : _currentState;
+        public bool IsMenuOpen() => _isMenuOpen;
         public bool IsInTwoD() => _isInTwoD;
-        public bool IsSecondInteractionBlocked() => _isSecondInteractionBlocked;
+        public bool IsSecondInteractionBlocked() => _isSecondInteractionBlocked || _isMenuOpen || _controlLocks.Count > 0;
         public bool IsInShelter() => _isInShelter;
 
         public void Initialize()
@@ -40,14 +45,43 @@ namespace GameAssembly.Player
 
         public void SwitchDimension(bool isInTwoD)
         {
-            SetCurrentInteractionState(isInTwoD ? PlayerInteractStates.LOCKED : PlayerInteractStates.FREE);
+            if (_isInTwoD == isInTwoD)
+                return;
 
             _isInTwoD = isInTwoD;
+            ApplyInteractionState();
             OnDimensionChanged?.Invoke();
+        }
+
+        public void SetMenuOpen(bool isOpen)
+        {
+            _isMenuOpen = isOpen;
+            _input?.SetGameplayInputBlocked(isOpen);
+            ApplyInteractionState();
+        }
+
+        public void LockControls(object owner)
+        {
+            if (owner != null && _controlLocks.Add(owner))
+                ApplyInteractionState();
+        }
+
+        public void UnlockControls(object owner)
+        {
+            if (owner != null && _controlLocks.Remove(owner))
+                ApplyInteractionState();
         }
 
         public void SetCurrentInteractionState(PlayerInteractStates state)
         {
+            _currentState = state;
+            ApplyInteractionState();
+        }
+
+        private void ApplyInteractionState()
+        {
+            var state = GetCurrentState();
+
             if (state == PlayerInteractStates.LOCKED)
             {
                 Cursor.lockState = CursorLockMode.None;
@@ -59,8 +93,7 @@ namespace GameAssembly.Player
                 Cursor.visible = false;
             }
 
-            _currentState = state;
-            OnInteractionStateChanged?.Invoke(_currentState);
+            OnInteractionStateChanged?.Invoke(state);
         }
         
         public void Dispose()
@@ -70,7 +103,7 @@ namespace GameAssembly.Player
         
         private void OnInteractPerformed()
         {
-            if(IsInTwoD() && !_isSecondInteractionBlocked)
+            if(IsInTwoD() && !IsSecondInteractionBlocked())
                 SwitchDimension(false);
         }
     }

@@ -164,7 +164,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
         private void Update()
         {
-            if (!_isCrafting || _isCompleting)
+            if (!_isCrafting || _isCompleting || _playerState.IsMenuOpen())
                 return;
 
             // Handle cancellation via Escape
