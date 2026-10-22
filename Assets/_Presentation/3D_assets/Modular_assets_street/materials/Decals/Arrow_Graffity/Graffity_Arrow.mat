@@ -112,7 +112,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alfa_PVP_Intencety: 1
+    - _Alfa_PVP_Intencety: 0.76
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
