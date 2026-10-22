@@ -308,11 +308,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             // Delay slightly for smooth final snap
             DOVirtual.DelayedCall(0.3f, () =>
             {
-                string itemName = _currentCraft != null && _currentCraft.ItemData != null 
-                    ? _currentCraft.ItemData.ItemName 
-                    : "ПРЕДМЕТ";
-
-                successUI.PlaySuccessAnimation(itemName, FinalizeCraft);
+                successUI.PlaySuccessAnimation(_currentCraft != null ? _currentCraft.ItemData : null, FinalizeCraft);
             });
         }
 
