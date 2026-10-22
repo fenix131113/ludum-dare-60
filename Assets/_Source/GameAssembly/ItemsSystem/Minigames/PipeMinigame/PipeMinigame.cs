@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UI;
 using VContainer;
 using PlayerInput = GameAssembly.Player.Input.PlayerInput;
 using Random = UnityEngine.Random;
@@ -23,6 +24,8 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
         [SerializeField] private int sequenceCount;
         [SerializeField] private int charsInSequence;
         [SerializeField] private List<TMP_Text> charObjects;
+        [SerializeField] private Image ratImage;
+        [SerializeField] private Sprite[] ratSprites;
         
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerInput _input;
@@ -31,7 +34,9 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
         private bool _isPlaying;
         private int _sequencesLeft;
         private int _currentCharIndex;
+        private int _currentRatIndex;
         private bool _canAcceptInput;
+        private bool _isBind;
 
         public override event Action<bool> OnMinigameEnded;
 
@@ -47,9 +52,11 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 
         public override void ResetMinigame()
         {
+            _currentRatIndex = 0;
             _canAcceptInput = false;
             _sequencesLeft = sequenceCount;
             spaceHelper.SetActive(false);
+            ratImage.sprite = ratSprites[0];
             
             GenerateNewSequence();
         }
@@ -79,10 +86,15 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
             InputSystem.onEvent += OnInputSystemEvent;
 
             _input.OnJumpPerformed += OnJump;
+            
+            _isBind = true;
         }
 
         private void OnDestroy()
         {
+            if(!_isBind)
+                return;
+            
             InputSystem.onEvent -= OnInputSystemEvent;
             
             _input.OnJumpPerformed -= OnJump;
@@ -90,12 +102,16 @@ namespace GameAssembly.ItemsSystem.Minigames.PipeMinigame
 
         private void OnJump()
         {
-            if (_currentSequence.Length != 0)
+            if (_currentSequence.Length != 0 || !_isPlaying)
                 return;
             
             if(_sequencesLeft > 0)
+            {
                 _sequencesLeft--;
-                
+                _currentRatIndex++;
+            }
+
+            ratImage.sprite = ratSprites[_currentRatIndex];
             GenerateNewSequence();
             spaceHelper.SetActive(false);
         }

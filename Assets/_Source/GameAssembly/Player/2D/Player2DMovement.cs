@@ -1,6 +1,7 @@
 ﻿using GameAssembly.Player.Data;
 using GameAssembly.Player.Input;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace GameAssembly.Player._2D
@@ -8,7 +9,9 @@ namespace GameAssembly.Player._2D
     public class Player2DMovement : MonoBehaviour
     {
         [SerializeField] private Rigidbody rb;
-        
+        [SerializeField] private SpriteRenderer playerRenderer;
+        [SerializeField] private Animator playerAnimator;
+
         [Inject] private PlayerSettings _playerSettings;
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerInput _playerInput;
@@ -56,10 +59,14 @@ namespace GameAssembly.Player._2D
         private void FixedUpdate()
         {
             if (!_playerState.IsInTwoD())
+            {
+                StopPlayerAnim();
                 return;
+            }
 
             if (_playerState.IsSecondInteractionBlocked())
             {
+                StopPlayerAnim();
                 rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y, 0f);
                 return;
             }
@@ -72,7 +79,15 @@ namespace GameAssembly.Player._2D
                 < -0.1f => -1f,
                 _ => 0f
             };
-            
+
+            if (rawX != 0f)
+            {
+                StartPlayerAnim();
+                playerRenderer.flipX = rawX > 0;
+            }
+            else
+                StopPlayerAnim();
+
             var localVelocity = new Vector3(rawX * _playerSettings.TwoDSpeed, 0, 0);
             var globalMoveDirection = rb.rotation * localVelocity;
 
@@ -83,5 +98,8 @@ namespace GameAssembly.Player._2D
             rb.linearVelocity = new Vector3(globalMoveDirection.x, rb.linearVelocity.y, globalMoveDirection.z);
         }
 
+        private void StopPlayerAnim() => playerAnimator.speed = 0f;
+
+        private void StartPlayerAnim() => playerAnimator.speed = 1f;
     }
 }

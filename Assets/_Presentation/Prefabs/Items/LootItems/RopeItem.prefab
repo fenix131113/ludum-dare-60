@@ -50,6 +50,7 @@ MonoBehaviour:
   rootObject: {fileID: 6966934268681345603}
   minigame: 1
   minigameIndex: 0
+  itemToSkipMinigame: {fileID: 11400000, guid: bd6bafc8194e580f9e9dbe0876f9e317, type: 2}
 --- !u!65 &1671922113090697355
 BoxCollider:
   m_ObjectHideFlags: 0

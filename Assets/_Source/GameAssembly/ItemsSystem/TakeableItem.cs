@@ -2,6 +2,7 @@ using GameAssembly.Core;
 using GameAssembly.ItemsSystem.Minigames;
 using GameAssembly.LootLocation.Generation;
 using GameAssembly.Player;
+using GameAssembly.ShelterSystem;
 using UnityEngine;
 using VContainer;
 
@@ -13,9 +14,11 @@ namespace GameAssembly.ItemsSystem
         [SerializeField] private GameObject rootObject;
         [SerializeField] private bool minigame;
         [SerializeField] private int minigameIndex;
+        [SerializeField] private ItemDataSO itemToSkipMinigame;
 
         [Inject] private PlayerInventory _inventory;
         [Inject] private BlueprintLootSystem _blueprintLootSystem;
+        [Inject] private ShelterInventory _shelterInventory;
 
         private bool _isTaken;
         private AMinigame _activeMinigame;
@@ -29,7 +32,7 @@ namespace GameAssembly.ItemsSystem
             if (!IsInteractable())
                 return;
 
-            if (minigame)
+            if (minigame && itemToSkipMinigame && !_shelterInventory.IsItemInInventory(itemToSkipMinigame))
             {
                 var game = MinigamesResolver.Instance.GetMinigame(minigameIndex);
 

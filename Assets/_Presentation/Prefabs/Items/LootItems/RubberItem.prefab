@@ -49,7 +49,8 @@ MonoBehaviour:
   <ItemData>k__BackingField: {fileID: 11400000, guid: 03b82be583505755acd004ebd715d9f5, type: 2}
   rootObject: {fileID: 97203188706326706}
   minigame: 0
-  minigameIndex: 1
+  minigameIndex: 0
+  itemToSkipMinigame: {fileID: 0}
 --- !u!65 &1718959005313088282
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ namespace GameAssembly.LootLocation.Generation
         private StoryLootSystem _storyLootSystem;
         private BlueprintLootSystem _blueprintLootSystem;
         private bool _hasSpawned;
-        private IReadOnlyList<LootWeightData> _storyLootWeights = new LootWeightData[0];
+        private IReadOnlyList<LootWeightData> _storyLootWeights = Array.Empty<LootWeightData>();
 
         public void InitializeStoryLoot(StoryLootSystem storyLootSystem, IReadOnlyList<LootWeightData> weights)
         {
@@ -49,8 +49,7 @@ namespace GameAssembly.LootLocation.Generation
 
                 if (selectedLoot.LootPrefab)
                 {
-                    var spawned = Instantiate(selectedLoot.LootPrefab, positionData.position,
-                        positionData.rotation, transform);
+                    var spawned = Instantiate(selectedLoot.LootPrefab, positionData.position, selectedLoot.LootPrefab.transform.rotation, transform);
 
                     if (_blueprintLootSystem != null)
                     {
@@ -67,7 +66,7 @@ namespace GameAssembly.LootLocation.Generation
         private MaterialItemDataSO GetRandomItemByWeight(List<LootWeightData> pool)
         {
             var normalLoot = pool ?? new List<LootWeightData>();
-            var storyLoot = _storyLootWeights ?? new LootWeightData[0];
+            var storyLoot = _storyLootWeights ?? Array.Empty<LootWeightData>();
             var availableLoot = normalLoot.Where(lootData => lootData.Item && !lootData.Item.StoryItem && lootData.Item.LootPrefab && lootData.Weight > 0)
                 .Concat(storyLoot.Where(lootData => lootData.Item && lootData.Item.StoryItem && lootData.Item.LootPrefab &&
                     lootData.Weight > 0 && _storyLootSystem != null && _storyLootSystem.CanSpawn(lootData.Item)))
