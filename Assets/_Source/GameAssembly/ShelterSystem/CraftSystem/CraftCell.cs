@@ -11,6 +11,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
     {
         [SerializeField] private RectTransform craftRequirementPrefab;
         [SerializeField] private RectTransform requirementsContent;
+        [SerializeField] private GameObject lockObject;
         [SerializeField] private Button craftButton;
         [SerializeField] private Image icon;
         [SerializeField] private TMP_Text nameLabel;
@@ -25,7 +26,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         {
             _craft = craft;
             _view = view;
-
+            
             icon.sprite = craft.ItemData.Icon;
             nameLabel.text = craft.ItemData.ItemName;
             
@@ -40,6 +41,9 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         private void Start()
         {
             craftButton.onClick.AddListener(OnCraftButtonClicked);
+            var canCraft = CanCraft();
+            craftButton.interactable = false;
+            lockObject.SetActive(!canCraft);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -64,10 +68,12 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             craftButton.onClick.RemoveListener(OnCraftButtonClicked);
         }
 
+        private bool CanCraft() =>
+            _craft.CraftsRequirements.All(req => _inventory.IsItemInInventory(req.ItemData, req.Count));
+        
         private void OnCraftButtonClicked()
         {
-            var requirementsComplete =
-                _craft.CraftsRequirements.All(req => _inventory.IsItemInInventory(req.ItemData, req.Count));
+            var requirementsComplete = CanCraft();
             
             if(!requirementsComplete)
                 return;
