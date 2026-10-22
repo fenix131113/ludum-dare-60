@@ -2,6 +2,7 @@
 using GameAssembly.Player.Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using VContainer;
 
 namespace GameAssembly.ItemsSystem.Minigames.WoodMinigame
@@ -9,6 +10,7 @@ namespace GameAssembly.ItemsSystem.Minigames.WoodMinigame
     public class Nail : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField] private Vector2 scrollVector;
+        [SerializeField] private Image nailImage;
         [SerializeField] private float needScrollValue;
         [SerializeField] private float scrollStrength;
         
@@ -28,6 +30,7 @@ namespace GameAssembly.ItemsSystem.Minigames.WoodMinigame
                 _startPosition = transform.localPosition;
             
             transform.localPosition = _startPosition;
+            nailImage.fillAmount = 0.5f;
             _currentScroll = 0;
             gameObject.SetActive(true);
         }
@@ -59,6 +62,7 @@ namespace GameAssembly.ItemsSystem.Minigames.WoodMinigame
             
             _currentScroll -= scroll.y * scrollStrength;
             transform.localPosition = Vector2.Lerp(_startPosition, _startPosition + scrollVector, Progress);
+            nailImage.fillAmount = Mathf.Lerp(0.5f, 1f, Progress);
 
             if (_currentScroll >= needScrollValue)
                 GetNail();

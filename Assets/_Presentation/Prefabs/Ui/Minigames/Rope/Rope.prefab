@@ -88,3 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2543899857f845f3b879ec5cdcd402f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.Minigames.RopeMinigame.Rope
+  img: {fileID: 6813362664108426484}

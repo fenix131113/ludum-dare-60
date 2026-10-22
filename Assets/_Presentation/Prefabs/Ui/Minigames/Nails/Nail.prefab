@@ -89,6 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.Minigames.WoodMinigame.Nail
   scrollVector: {x: 1, y: 1}
+  nailImage: {fileID: 244534493588698413}
   needScrollValue: 5
   scrollStrength: 0.25
-  moveStrength: 15

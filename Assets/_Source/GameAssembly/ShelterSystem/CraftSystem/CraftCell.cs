@@ -42,7 +42,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         {
             craftButton.onClick.AddListener(OnCraftButtonClicked);
             var canCraft = CanCraft();
-            craftButton.interactable = false;
+            craftButton.interactable = CanCraft();
             lockObject.SetActive(!canCraft);
         }
 
