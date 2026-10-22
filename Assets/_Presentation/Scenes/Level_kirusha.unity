@@ -4920,6 +4920,9 @@ MonoBehaviour:
   groundCheckDistance: 0.2
   maxSlopeAngle: 65
   groundStickSpeed: 2
+  maxStepHeight: 0.6
+  stepCheckDistance: 0.1
+  stepClearance: 0.02
 --- !u!54 &457343494
 Rigidbody:
   m_ObjectHideFlags: 0
