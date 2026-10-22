@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssembly::GameAssembly.Player.Data.PlayerSettings
   <Speed>k__BackingField: 5
   <SprintSpeed>k__BackingField: 7
-  <RayLenght>k__BackingField: 2
+  <RayLenght>k__BackingField: 3
   <TwoDSpeed>k__BackingField: 0.75
   <ShelterSpeedMultiplier>k__BackingField: 0.65
   <SprintDuration>k__BackingField: 5

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: SturdyRope
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Sturdy rope"
+  <ItemName>k__BackingField: Sturdy rope
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 5745638903164280449, guid: cab1cdd07f9450748bbcc3714bf88e75, type: 3}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: Wiring
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Wiring"
+  <ItemName>k__BackingField: Wiring
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 2521300830718306573, guid: 99a77e037d9f8724d8b90e83e652462b, type: 3}

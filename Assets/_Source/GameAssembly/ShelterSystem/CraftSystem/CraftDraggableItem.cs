@@ -93,13 +93,13 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             if (smooth)
             {
                 _moveTween = transform.DOMove(slot.SnapPosition, snapDuration).SetEase(Ease.OutBack);
-                _rotateTween = transform.DORotateQuaternion(slot.SnapRotation, snapDuration).SetEase(Ease.OutQuad);
+                _rotateTween = transform.DORotateQuaternion(_spawnRotation, snapDuration).SetEase(Ease.OutQuad);
                 _scaleTween = transform.DOScale(_baseScale, snapDuration).SetEase(Ease.OutQuad);
             }
             else
             {
                 transform.position = slot.SnapPosition;
-                transform.rotation = slot.SnapRotation;
+                transform.rotation = _spawnRotation;
                 transform.localScale = _baseScale;
             }
         }

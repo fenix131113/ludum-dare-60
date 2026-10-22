@@ -17,5 +17,5 @@ MonoBehaviour:
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 1
   <Description>k__BackingField: 
-  <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <LootPrefab>k__BackingField: {fileID: 535787598696150935, guid: 144e12fc42119b344805524ff7e04d16, type: 3}
+  <WorkbenchPrefab>k__BackingField: {fileID: 7683627978706478468, guid: b3288fc1d1a430a4c95408968bff660a, type: 3}

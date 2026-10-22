@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: LongPipe
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Long pipe"
+  <ItemName>k__BackingField: Long pipe
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: "sturdy"
+  <Description>k__BackingField: sturdy
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 2220941228383471931, guid: 46ea3a88b1612a64dace3e1e1e80d08d, type: 3}

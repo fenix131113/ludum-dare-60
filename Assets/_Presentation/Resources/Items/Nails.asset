@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: Nails
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Nails"
+  <ItemName>k__BackingField: Nails
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 5515802406511856447, guid: 07540a97dae84444d9dcf24980ef119f, type: 3}

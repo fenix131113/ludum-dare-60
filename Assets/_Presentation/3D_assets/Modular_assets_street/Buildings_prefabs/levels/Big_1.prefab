@@ -338,37 +338,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: -0.0000009536743, y: 0, z: 0.0000019073486}
---- !u!1 &397570200503163684
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9132405667663759553}
-  m_Layer: 3
-  m_Name: PaperItem (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9132405667663759553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397570200503163684}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.127, y: -0.055, z: -13.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6119699786645842455}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400726786800592239
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,13 +3559,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8823874657969053974}
-  - {fileID: 9132405667663759553}
   - {fileID: 5731583033467005067}
   - {fileID: 1253379841166987919}
   - {fileID: 3331197708046887961}
   - {fileID: 2137437628771860956}
   - {fileID: 8083331224246159772}
-  - {fileID: 6207851619305704612}
   - {fileID: 749364219812937631}
   - {fileID: 1736611769004029622}
   - {fileID: 7716605280008991931}
@@ -4676,37 +4643,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.016, y: -0.055, z: 4.53}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6119699786645842455}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2325093975618844513
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6207851619305704612}
-  m_Layer: 3
-  m_Name: PaperItem (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6207851619305704612
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2325093975618844513}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.127, y: -0.055, z: -13.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12690,13 +12626,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssembly::GameAssembly.LootLocation.Generation.RoomLootSpawner
   lootPositions:
   - {fileID: 8823874657969053974}
-  - {fileID: 9132405667663759553}
+  - {fileID: 0}
   - {fileID: 5731583033467005067}
   - {fileID: 1253379841166987919}
   - {fileID: 3331197708046887961}
   - {fileID: 2137437628771860956}
   - {fileID: 8083331224246159772}
-  - {fileID: 6207851619305704612}
+  - {fileID: 0}
   - {fileID: 749364219812937631}
   - {fileID: 1736611769004029622}
   - {fileID: 7716605280008991931}

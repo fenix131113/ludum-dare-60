@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: Microphone
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Microphone"
+  <ItemName>k__BackingField: Microphone
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 25
   <StoryItem>k__BackingField: 1
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 2751084379600395073, guid: 768a941dd0e137a4d8ce283a512cb4ca, type: 3}

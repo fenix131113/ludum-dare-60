@@ -62,7 +62,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
             {
                 SpawnSlots();
                 SpawnRequiredItems(itemSpawnPoints);
-                return true;
+                    return true;
             }
 
             if (slots == null || slots.Length == 0)
@@ -236,8 +236,11 @@ namespace GameAssembly.ShelterSystem.CraftSystem
                     }
 
                     GameObject instance;
-                    if (prefab != null)
+                    if (prefab)
                     {
+                        // Spawn points define only where the item appears. Its authored
+                        // prefab rotation is part of the item's visual setup.
+                        spawnRot = prefab.transform.rotation;
                         instance = Instantiate(prefab, spawnPos, spawnRot, transform);
                     }
                     else

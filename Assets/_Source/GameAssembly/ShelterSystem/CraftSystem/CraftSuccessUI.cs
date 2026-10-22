@@ -16,7 +16,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [Header("Animation Settings")]
         [SerializeField] private float fadeDuration = 0.6f;
         [SerializeField] private float displayDuration = 2.0f;
-        [SerializeField] private string textFormat = "ВЫ СОЗДАЛИ\n{0}";
+        [SerializeField] private string textFormat = "You Crafted\n{0}";
 
         private void Awake()
         {

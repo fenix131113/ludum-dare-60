@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70376b3e4a9497f9fe27932673a03b3, type: 3}
   m_Name: Gunpowder
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
-  <ItemName>k__BackingField: "Gunpowder"
+  <ItemName>k__BackingField: Gunpowder
   <Icon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 25
   <StoryItem>k__BackingField: 1
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 1214835747796207700, guid: 26f825931cc1f4048bc5af01ccfad92e, type: 3}
