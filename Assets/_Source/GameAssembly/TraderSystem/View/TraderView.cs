@@ -1,6 +1,7 @@
 ﻿using GameAssembly.Player;
 using GameAssembly.Player.Input;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace GameAssembly.TraderSystem.View

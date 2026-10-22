@@ -243,4 +243,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameAssembly::GameAssembly.TraderSystem.SellDialogueItem
   dialogueLabel: {fileID: 4509367706378322626}
   backgroundImage: {fileID: 1250218269390060021}
-  lifetime: 7
+  lifetime: 8

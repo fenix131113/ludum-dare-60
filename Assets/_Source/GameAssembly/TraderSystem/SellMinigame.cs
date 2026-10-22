@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using GameAssembly.ItemsSystem.Minigames;
+using GameAssembly.TraderSystem.View;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -12,6 +14,7 @@ namespace GameAssembly.TraderSystem
         private const int MAX_INFLUENCE = 100;
 
         [SerializeField] private List<DialogueItem> dialogueItems;
+        [SerializeField] private List<CharacterGroupItem> characterGroupItems;
         [SerializeField] private GameObject minigamePanel;
         [SerializeField] private Transform dialoguesParent;
         [SerializeField] private Image positiveFiller;
@@ -42,6 +45,8 @@ namespace GameAssembly.TraderSystem
             negativeFiller.fillAmount =
                 Mathf.Abs(Mathf.Clamp((float)_currentInfluence, -MAX_INFLUENCE, 0)) / MAX_INFLUENCE;
 
+            RedrawCharacterView();
+            
             switch (_currentInfluence)
             {
                 case MAX_INFLUENCE:
@@ -52,7 +57,7 @@ namespace GameAssembly.TraderSystem
                     break;
             }
         }
-
+        
         public void RemoveDialogue(SellDialogueItem item) => _spawnedDialogues.Remove(item);
 
         public override void StartMinigame()
@@ -65,6 +70,7 @@ namespace GameAssembly.TraderSystem
         public override void ResetMinigame()
         {
             _currentInfluence = 0;
+            RedrawCharacterView();
             ApplyInfluence(0);
             IsDefaultPrice = true;
             _spawnedDialogues.ForEach(x => Destroy(x.gameObject));
@@ -92,6 +98,21 @@ namespace GameAssembly.TraderSystem
 
         public override bool IsPlaying() => _isPlaying;
 
+        private void RedrawCharacterView()
+        {
+            var characterGroup = characterGroupItems.FirstOrDefault(x => x.View.gameObject.activeSelf);
+            
+            if(characterGroup == null)
+                return;
+
+            characterGroup.CharacterIcon.sprite = _currentInfluence switch
+            {
+                >= MAX_INFLUENCE / 2 => characterGroup.HappySprite,
+                <= -MAX_INFLUENCE / 2 => characterGroup.SadSprite,
+                _ => characterGroup.NeutralSprite
+            };
+        }
+        
         private void EndMinigameWithDefault()
         {
             _isPlaying = false;
@@ -151,5 +172,15 @@ namespace GameAssembly.TraderSystem
     {
         [field: SerializeField] public string Text { get; private set; }
         [field: SerializeField] public int Influence { get; private set; }
+    }
+    
+    [Serializable]
+    public class CharacterGroupItem
+    {
+        [field: SerializeField] public TraderView View { get; private set; }
+        [field: SerializeField] public Image CharacterIcon { get; private set; }
+        [field: SerializeField] public Sprite HappySprite { get; private set; }
+        [field: SerializeField] public Sprite NeutralSprite { get; private set; }
+        [field: SerializeField] public Sprite SadSprite { get; private set; }
     }
 }

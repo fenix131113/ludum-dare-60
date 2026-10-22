@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using GameAssembly.ItemsSystem;
 using GameAssembly.ShelterSystem;
 using GameAssembly.TraderSystem.View.ShopCells;
@@ -35,7 +36,7 @@ namespace GameAssembly.TraderSystem.View
         public override void CloseTraderView()
         {
             base.CloseTraderView();
-            _shopCells.ForEach(x => Destroy(x.gameObject));
+            _shopCells.Where(x => x).ToList().ForEach(x => Destroy(x.gameObject));
             _shopCells.Clear();
         }
     }

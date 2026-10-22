@@ -19,11 +19,21 @@ namespace GameAssembly.Player
         [SerializeField, Min(0.01f)] private float stepCheckDistance = 0.1f;
         [SerializeField, Min(0.001f)] private float stepClearance = 0.02f;
 
+        [Header("Footsteps")]
+        [SerializeField] private AudioSource footstepsAudioSource;
+        [SerializeField] private AudioClip[] footstepClips;
+        [SerializeField, Min(0.1f)] private float footstepDistance = 1.65f;
+        [SerializeField, Min(0f)] private float minimumFootstepSpeed = 0.1f;
+        [SerializeField, Range(0f, 1f)] private float minimumFootstepVolume = 0.7f;
+        [SerializeField] private Vector2 footstepPitchRange = new(0.94f, 1.06f);
+
         private readonly RaycastHit[] _groundHits = new RaycastHit[16];
         private readonly RaycastHit[] _stepHits = new RaycastHit[16];
         private readonly List<Vector3> _wallNormals = new();
         private Collider _playerCollider;
         private bool _hasStepSupport;
+        private float _distanceSinceFootstep;
+        private int _lastFootstepIndex = -1;
 
         [Inject] private PlayerCamera _playerCamera;
         [Inject] private PlayerSettings _playerSettings;
@@ -39,6 +49,7 @@ namespace GameAssembly.Player
         public void Teleport(Vector3 position)
         {
             _hasStepSupport = false;
+            ResetFootsteps();
             _wallNormals.Clear();
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
@@ -52,6 +63,7 @@ namespace GameAssembly.Player
             if (_playerState.IsInTwoD())
             {
                 _hasStepSupport = false;
+                ResetFootsteps();
                 _playerStamina.Tick(false, Time.fixedDeltaTime);
                 _wallNormals.Clear();
                 rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
@@ -98,6 +110,8 @@ namespace GameAssembly.Player
             }
             else
                 rb.linearVelocity = new Vector3(worldMove.x, Mathf.Min(rb.linearVelocity.y, 0f), worldMove.z);
+
+            UpdateFootsteps(isGrounded || _hasStepSupport, canMove, worldMove.magnitude);
         }
 
         private void OnCollisionEnter(Collision collision) => RegisterWallContacts(collision);
@@ -107,6 +121,85 @@ namespace GameAssembly.Player
         {
             _wallNormals.Clear();
             _hasStepSupport = false;
+            ResetFootsteps();
+        }
+
+        private void UpdateFootsteps(bool isGrounded, bool canMove, float movementSpeed)
+        {
+            if (!isGrounded || !canMove || movementSpeed < minimumFootstepSpeed)
+            {
+                ResetFootsteps();
+                return;
+            }
+
+            _distanceSinceFootstep += movementSpeed * Time.fixedDeltaTime;
+            if (_distanceSinceFootstep < footstepDistance)
+                return;
+
+            _distanceSinceFootstep %= footstepDistance;
+            PlayFootstep(movementSpeed);
+        }
+
+        private void PlayFootstep(float movementSpeed)
+        {
+            if (footstepsAudioSource == null)
+                return;
+
+            var clip = GetFootstepClip();
+            if (clip == null)
+                return;
+
+            var maxSpeed = Mathf.Max(_playerSettings.SprintSpeed, minimumFootstepSpeed);
+            var speedFactor = Mathf.Clamp01(movementSpeed / maxSpeed);
+            var minPitch = Mathf.Min(footstepPitchRange.x, footstepPitchRange.y);
+            var maxPitch = Mathf.Max(footstepPitchRange.x, footstepPitchRange.y);
+
+            footstepsAudioSource.pitch = Random.Range(minPitch, maxPitch) * Mathf.Lerp(0.96f, 1.04f, speedFactor);
+            footstepsAudioSource.PlayOneShot(clip, Mathf.Lerp(minimumFootstepVolume, 1f, speedFactor));
+        }
+
+        private AudioClip GetFootstepClip()
+        {
+            if (footstepClips == null || footstepClips.Length == 0)
+                return footstepsAudioSource.clip;
+
+            var validClips = 0;
+            for (var i = 0; i < footstepClips.Length; i++)
+            {
+                if (footstepClips[i] != null)
+                    validClips++;
+            }
+
+            if (validClips == 0)
+                return footstepsAudioSource.clip;
+
+            var selected = _lastFootstepIndex;
+            for (var attempts = 0; attempts < 4 && selected == _lastFootstepIndex; attempts++)
+            {
+                selected = Random.Range(0, footstepClips.Length);
+                if (footstepClips[selected] == null)
+                    selected = _lastFootstepIndex;
+            }
+
+            if (selected < 0 || footstepClips[selected] == null)
+            {
+                for (var i = 0; i < footstepClips.Length; i++)
+                {
+                    if (footstepClips[i] != null)
+                    {
+                        selected = i;
+                        break;
+                    }
+                }
+            }
+
+            _lastFootstepIndex = selected;
+            return footstepClips[selected];
+        }
+
+        private void ResetFootsteps()
+        {
+            _distanceSinceFootstep = 0f;
         }
 
         private bool IsSupportedOnStepEdge()
