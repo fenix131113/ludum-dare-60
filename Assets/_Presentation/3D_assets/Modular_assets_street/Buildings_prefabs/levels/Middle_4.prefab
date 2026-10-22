@@ -652,6 +652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: W15_2_brick 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8187265158294824849, guid: cee9d7f975f08da4f930c1e0932d1ab7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ea30592fe58da244892a073d71ee94e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -811,6 +815,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7022782263181940623}
     m_Modifications:
+    - target: {fileID: 660648196710072625, guid: e6bc9c2b86fc42d479195cc78a1b5360, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce3d216ac534ebb4d8dd9d36bb2ee4c4, type: 2}
     - target: {fileID: 4926912959647461739, guid: e6bc9c2b86fc42d479195cc78a1b5360, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.40028825
@@ -1388,6 +1396,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5707053371706589518, guid: e6bc9c2b86fc42d479195cc78a1b5360, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce3d216ac534ebb4d8dd9d36bb2ee4c4, type: 2}
     - target: {fileID: 6126752694823556644, guid: e6bc9c2b86fc42d479195cc78a1b5360, type: 3}
       propertyPath: m_Name
       value: W10_2_brick (2)
@@ -1484,6 +1496,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7022782263181940623}
     m_Modifications:
+    - target: {fileID: 1033105907414195559, guid: 64b2ebd09129f9447a64f18b0674066f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce3d216ac534ebb4d8dd9d36bb2ee4c4, type: 2}
     - target: {fileID: 4926912959647461739, guid: 64b2ebd09129f9447a64f18b0674066f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.40028825
@@ -1724,6 +1740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: W7_3_brick
       objectReference: {fileID: 0}
+    - target: {fileID: 8109574306746111347, guid: 89b63509190e7e046af56d1493fddf1d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ce3d216ac534ebb4d8dd9d36bb2ee4c4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
