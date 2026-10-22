@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Microphone
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Microphone
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 40250019079a57141b1d0721ae58c607, type: 3}
   <Cost>k__BackingField: 25
   <StoryItem>k__BackingField: 1
   <Description>k__BackingField: 

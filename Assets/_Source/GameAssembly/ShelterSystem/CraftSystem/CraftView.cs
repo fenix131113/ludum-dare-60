@@ -11,7 +11,11 @@ namespace GameAssembly.ShelterSystem.CraftSystem
     public class CraftView : MonoBehaviour
     {
         [SerializeField] private GameObject craftsPanel;
+        [SerializeField] private CraftInventoryCell inventoryCellPrefab;
+        [SerializeField] private LockedBlueprintCell lockedBlueprintCellPrefab;
         [SerializeField] private RectTransform craftsContent;
+        [SerializeField] private RectTransform inventoryContent;
+        [SerializeField] private RectTransform lockedBlueprintsContent;
         [SerializeField] private CraftCell craftCellPrefab;
         [SerializeField] private List<CraftItemSO> crafts;
         [SerializeField] private List<CraftItemSO> blockedCrafts;
@@ -24,6 +28,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [Inject] private PlayerInput _input;
         [Inject] private CraftPhysicalGame _craftPhysicalGame;
         [Inject] private CraftItemTooltip _tooltip;
+        [Inject] private ShelterInventory _inventory;
 
         private bool _isCrafting;
         private CraftItemSO _currentCraft;
@@ -116,6 +121,27 @@ namespace GameAssembly.ShelterSystem.CraftSystem
                 GameInstaller.InjectGameObject(spawned.gameObject);
                 _craftCells.Add(spawned);
             }
+            
+            RedrawInventory();
+            RedrawLockedBlueprints();
+        }
+
+        private void RedrawInventory()
+        {
+            for (var i = 0; i < inventoryContent.childCount; i++)
+                Destroy(inventoryContent.GetChild(i).gameObject);
+            
+            foreach (var item in _inventory.Items)
+                Instantiate(inventoryCellPrefab, inventoryContent).Initialize(item.Key, item.Value);
+        }
+
+        private void RedrawLockedBlueprints()
+        {
+            for (var i = 0; i < lockedBlueprintsContent.childCount; i++)
+                Destroy(lockedBlueprintsContent.GetChild(i).gameObject);
+            
+            foreach (var craft in blockedCrafts)
+                Instantiate(lockedBlueprintCellPrefab, lockedBlueprintsContent).Initialize(craft.ItemData);
         }
 
         private void OnInteractionClicked()

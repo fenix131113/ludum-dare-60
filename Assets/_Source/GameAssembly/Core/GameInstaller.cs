@@ -1,3 +1,4 @@
+using GameAssembly.Core.View;
 using GameAssembly.LootLocation;
 using GameAssembly.LootLocation.Generation;
 using GameAssembly.Player;
@@ -53,6 +54,7 @@ namespace GameAssembly.Core
             builder.RegisterComponentInHierarchy<ScreenTransition>();
             builder.RegisterComponentInHierarchy<GameMenuView>();
             builder.RegisterComponentInHierarchy<GameSettingsView>();
+            builder.RegisterComponentInHierarchy<EndGameView>();
             
             builder.Register<PlayerInventory>(Lifetime.Scoped)
                 .As<IInitializable>()

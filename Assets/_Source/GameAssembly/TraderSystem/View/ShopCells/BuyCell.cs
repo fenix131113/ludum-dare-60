@@ -1,6 +1,7 @@
 using GameAssembly.ItemsSystem;
 using GameAssembly.Player;
 using GameAssembly.ShelterSystem;
+using GameAssembly.ShelterSystem.CraftSystem;
 using UnityEngine;
 using VContainer;
 
@@ -11,9 +12,11 @@ namespace GameAssembly.TraderSystem.View.ShopCells
         [SerializeField] private ItemDataSO buyItem;
         [SerializeField, Min(1)] private int count = 1;
         [SerializeField] private string buyButtonText = "Buy";
+        [SerializeField] private bool deactivateAfterBought;
 
         [Inject] private PlayerBank _playerBank;
         [Inject] private ShelterInventory _shelterInventory;
+        [Inject] private CraftView _craftView;
 
         private long TotalCost => (long)buyItem.Cost * count;
 
@@ -34,7 +37,13 @@ namespace GameAssembly.TraderSystem.View.ShopCells
             if (!CanUse() || !_playerBank.TryRemoveMoney((int)TotalCost))
                 return;
 
-            _shelterInventory.AddItem(buyItem, count);
+            if(buyItem is not BlueprintItemDataSO so)
+                _shelterInventory.AddItem(buyItem, count);
+            else
+                _craftView.UnblockCraft(so.Craft);
+            
+            if(deactivateAfterBought)
+                gameObject.SetActive(false);
         }
 
         protected override void Start()

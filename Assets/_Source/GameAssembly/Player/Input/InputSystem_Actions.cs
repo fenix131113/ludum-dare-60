@@ -647,7 +647,7 @@ namespace GameAssembly.Player.Input
                 {
                     ""name"": """",
                     ""id"": ""c356e770-180a-4670-b575-91fe3fb645f1"",
-                    ""path"": ""<Keyboard>/backquote"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",

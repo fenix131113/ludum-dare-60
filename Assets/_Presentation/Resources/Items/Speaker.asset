@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Speaker
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Speaker
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: b1cb115c320a2f34b8569ab2faa4e16c, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 1
   <Description>k__BackingField: 

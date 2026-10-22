@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GameAssembly.Core.View;
 using GameAssembly.ItemsSystem;
 using GameAssembly.Player;
 using GameAssembly.ShelterSystem;
@@ -14,6 +15,7 @@ namespace GameAssembly.TraderSystem
         [Inject] private CraftView _craftView;
         [Inject] private PlayerBank _playerBank;
         [Inject] private ShelterInventory _shelterInventory;
+        [Inject] private EndGameView _endGameView;
 
         private readonly HashSet<BlueprintItemDataSO> _quests = new();
         private readonly HashSet<CraftItemSO> _completedCrafts = new();
@@ -84,6 +86,10 @@ namespace GameAssembly.TraderSystem
             ActiveQuest = null;
             _isChangingQuest = false;
             OnQuestChanged?.Invoke();
+            
+            if (_quests.Count == _completedCrafts.Count)
+                _endGameView.WinGame();
+            
             return true;
         }
     }

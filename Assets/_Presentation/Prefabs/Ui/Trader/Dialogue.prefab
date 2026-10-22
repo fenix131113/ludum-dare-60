@@ -68,15 +68,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Some text inside
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2ed7ea61e17f0774c8a7d19b722b6375, type: 2}
+  m_sharedMaterial: {fileID: 3051401324921549247, guid: 2ed7ea61e17f0774c8a7d19b722b6375, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281351567
+  m_fontColor: {r: 0.56, g: 0.24, b: 0.19, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -189,7 +189,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -228, y: 254}
-  m_SizeDelta: {x: 305.29, y: 50}
+  m_SizeDelta: {x: 340.6179, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4532266385158189144
 CanvasRenderer:
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9, g: 0.87, b: 0.79, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: Megaphone
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Megaphone"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Megaphone
+  <Icon>k__BackingField: {fileID: 21300000, guid: aeb387008dc89604ca0308d237962beb, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 1
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}

@@ -56,7 +56,7 @@ namespace GameAssembly.Core
 
         public void Open()
         {
-            if (_isOpen || _screenTransition.IsTransitioning)
+            if (_isOpen || _screenTransition.IsTransitioning || _playerState.IsGameEnded())
                 return;
 
             _isOpen = true;

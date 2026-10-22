@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Paper
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Paper
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: a664cd0375a483a459bc44c310dc8283, type: 3}
   <Cost>k__BackingField: 2
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 4019598265809440579, guid: 7a5da603f1471b844af8d731fc4346ad, type: 3}
-  <WorkbenchPrefab>k__BackingField: {fileID: 0}
+  <WorkbenchPrefab>k__BackingField: {fileID: 6159233970223576370, guid: 04109173c921dc74796dbc64cbf68503, type: 3}

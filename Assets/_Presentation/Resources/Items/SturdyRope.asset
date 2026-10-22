@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SturdyRope
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Sturdy rope
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 547ca1f9747ce4e438cc51302617364b, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 

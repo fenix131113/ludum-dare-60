@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: StrangeBomb
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Strange Bomb"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Strange Bomb
+  <Icon>k__BackingField: {fileID: 21300000, guid: ef4d616d4c457b047b728617df6ac101, type: 3}
   <Cost>k__BackingField: 70
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}

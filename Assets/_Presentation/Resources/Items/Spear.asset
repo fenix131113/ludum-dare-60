@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: Spear
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Spear"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Spear
+  <Icon>k__BackingField: {fileID: 21300000, guid: 879fe86e67c3c5f4ebe5717450a7fb52, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: "Bypasses paper minigame"
+  <Description>k__BackingField: Bypasses paper minigame
   <LootPrefab>k__BackingField: {fileID: 0}

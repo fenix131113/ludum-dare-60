@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LongPipe
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Long pipe
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 47cc01a8ee040c2489dcca3658629dc9, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: sturdy

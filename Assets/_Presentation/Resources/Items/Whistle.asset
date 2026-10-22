@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: Whistle
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Whistle"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Whistle
+  <Icon>k__BackingField: {fileID: 21300000, guid: d1790c419e1fcfa448db8c6e41a6ebae, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: "Bypasses rope minigame"
+  <Description>k__BackingField: Bypasses rope minigame
   <LootPrefab>k__BackingField: {fileID: 0}

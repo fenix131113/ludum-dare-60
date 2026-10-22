@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: LockpickSet
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Lockpick Set"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Lockpick Set
+  <Icon>k__BackingField: {fileID: 21300000, guid: 399a38c5a26f31f4a980ff9524ba7d84, type: 3}
   <Cost>k__BackingField: 40
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}

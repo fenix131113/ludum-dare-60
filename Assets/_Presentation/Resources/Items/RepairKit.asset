@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: RepairKit
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Repair Kit"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Repair Kit
+  <Icon>k__BackingField: {fileID: 21300000, guid: 730e9e76d8651cd4f87e8f38f907f6a0, type: 3}
   <Cost>k__BackingField: 90
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}

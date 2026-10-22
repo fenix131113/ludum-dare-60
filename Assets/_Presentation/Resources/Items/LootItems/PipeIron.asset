@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PipeIron
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Iron Pipe
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 3f45065fb9d30e64fac3ebaf51304cec, type: 3}
   <Cost>k__BackingField: 2
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 

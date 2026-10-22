@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gunpowder
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Gunpowder
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 84176876eff57164caefaef024bbdc56, type: 3}
   <Cost>k__BackingField: 25
   <StoryItem>k__BackingField: 1
   <Description>k__BackingField: 

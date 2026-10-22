@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7eb818eb224be397db4c1675e4458a, type: 3}
   m_Name: HandGrenade
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.ItemDataSO
-  <ItemName>k__BackingField: "Hand Grenade"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Hand Grenade
+  <Icon>k__BackingField: {fileID: 21300000, guid: f27f6936e7c659b458efa3bc617896c5, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 1
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}

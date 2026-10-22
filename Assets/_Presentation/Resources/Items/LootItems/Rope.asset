@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rope
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Rope
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 92a507ccd4315dc4a8b8f745058c73e4, type: 3}
   <Cost>k__BackingField: 3
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 

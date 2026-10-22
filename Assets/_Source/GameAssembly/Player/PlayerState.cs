@@ -15,19 +15,27 @@ namespace GameAssembly.Player
         public event Action OnShelterStateChanged;
 
         [Inject] private PlayerInput _input;
-        
+
         private PlayerInteractStates _currentState = PlayerInteractStates.FREE;
         private bool _isInTwoD;
         private bool _isSecondInteractionBlocked;
         private bool _isInShelter = true;
         private bool _isMenuOpen;
+        private bool _isGameEnded;
         private readonly HashSet<object> _controlLocks = new();
 
-        public PlayerInteractStates GetCurrentState() => _isMenuOpen || _isInTwoD || _controlLocks.Count > 0
-            ? PlayerInteractStates.LOCKED : _currentState;
+        public PlayerInteractStates GetCurrentState() =>
+            _isMenuOpen || _isInTwoD || _controlLocks.Count > 0 || _isGameEnded
+                ? PlayerInteractStates.LOCKED
+                : _currentState;
+
         public bool IsMenuOpen() => _isMenuOpen;
         public bool IsInTwoD() => _isInTwoD;
-        public bool IsSecondInteractionBlocked() => _isSecondInteractionBlocked || _isMenuOpen || _controlLocks.Count > 0;
+        public bool IsGameEnded() => _isGameEnded;
+
+        public bool IsSecondInteractionBlocked() =>
+            _isSecondInteractionBlocked || _isMenuOpen || _controlLocks.Count > 0 || _isGameEnded;
+
         public bool IsInShelter() => _isInShelter;
 
         public void Initialize()
@@ -35,12 +43,14 @@ namespace GameAssembly.Player
             _input.OnInteractPerformed += OnInteractPerformed;
         }
 
+        public void SetGameEnded(bool isGameEnded) => _isGameEnded = isGameEnded;
+
         public void SwitchShelterState(bool inShelter)
         {
             _isInShelter = inShelter;
             OnShelterStateChanged?.Invoke();
         }
-        
+
         public void ChangeBlockSecondInteraction(bool blocked) => _isSecondInteractionBlocked = blocked;
 
         public void SwitchDimension(bool isInTwoD)
@@ -95,15 +105,15 @@ namespace GameAssembly.Player
 
             OnInteractionStateChanged?.Invoke(state);
         }
-        
+
         public void Dispose()
         {
             _input.OnInteractPerformed -= OnInteractPerformed;
         }
-        
+
         private void OnInteractPerformed()
         {
-            if(IsInTwoD() && !IsSecondInteractionBlocked())
+            if (IsInTwoD() && !IsSecondInteractionBlocked())
                 SwitchDimension(false);
         }
     }

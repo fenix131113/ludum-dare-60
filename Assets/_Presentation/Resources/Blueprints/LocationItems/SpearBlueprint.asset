@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b14160e856444a19d9cd5145907b1d0, type: 3}
   m_Name: SpearBlueprint
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.BlueprintItemDataSO
-  <ItemName>k__BackingField: "Spear Blueprint"
-  <Icon>k__BackingField: {fileID: 0}
+  <ItemName>k__BackingField: Spear Blueprint
+  <Icon>k__BackingField: {fileID: 21300000, guid: c7352c536aecdd74eb47cf6506456142, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
-  <Description>k__BackingField: ""
+  <Description>k__BackingField: 
   <LootPrefab>k__BackingField: {fileID: 0}
   <Craft>k__BackingField: {fileID: 11400000, guid: 1e6e8370dbe8506da7f110ab15b0c701, type: 2}

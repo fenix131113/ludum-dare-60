@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BoltAndNut
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Bolt and nut
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 92c6a5d2eec85084db0a008118ae7a92, type: 3}
   <Cost>k__BackingField: 0
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 

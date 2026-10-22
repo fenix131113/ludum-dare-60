@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rubber
   m_EditorClassIdentifier: GameAssembly::GameAssembly.ItemsSystem.MaterialItemDataSO
   <ItemName>k__BackingField: Rubber
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 1ce7d5b893b71314a8d521897b6f0d25, type: 3}
   <Cost>k__BackingField: 2
   <StoryItem>k__BackingField: 0
   <Description>k__BackingField: 
