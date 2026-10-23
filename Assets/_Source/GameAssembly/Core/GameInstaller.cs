@@ -40,6 +40,7 @@ namespace GameAssembly.Core
             builder.Register<BlueprintLootSystem>(Lifetime.Scoped);
 
             builder.RegisterComponentInHierarchy<PlayerCamera>();
+            builder.RegisterComponentInHierarchy<AudioSoundPlayer>();
             builder.RegisterComponentInHierarchy<CraftView>();
             builder.RegisterComponentInHierarchy<CraftItemTooltip>();
             builder.RegisterComponentInHierarchy<LootPhaseEnd>();

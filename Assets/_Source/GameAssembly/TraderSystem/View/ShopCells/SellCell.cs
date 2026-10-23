@@ -1,4 +1,5 @@
-﻿using GameAssembly.ItemsSystem;
+﻿using GameAssembly.Core;
+using GameAssembly.ItemsSystem;
 using GameAssembly.Player;
 using GameAssembly.ShelterSystem;
 using UnityEngine;
@@ -11,10 +12,13 @@ namespace GameAssembly.TraderSystem.View.ShopCells
     {
         [SerializeField] private Button negotiateButton;
         [SerializeField] private ItemDataSO sellItem;
+        [SerializeField] private AudioClip sellClip;
+        [SerializeField] private float soundVolume = 0.35f;
 
         [Inject] protected PlayerBank _playerBank;
         [Inject] protected ShelterInventory _shelterInventory;
         [Inject] protected SellMinigame _sellMinigame;
+        [Inject] protected AudioSoundPlayer _soundPlayer;
 
         private bool _isSalePending;
 
@@ -35,7 +39,8 @@ namespace GameAssembly.TraderSystem.View.ShopCells
                 return;
 
             _playerBank.AddMoney(sellItem.Cost);
-
+            _soundPlayer.PlaySound(sellClip, soundVolume);
+            
             if (_shelterInventory.IsItemInInventory(sellItem))
             {
                 countLabel.text = "x" + _shelterInventory.Items[sellItem].ToString();
@@ -60,6 +65,7 @@ namespace GameAssembly.TraderSystem.View.ShopCells
             if (!_isSalePending)
                 return;
 
+            _soundPlayer.PlaySound(sellClip, soundVolume);
             _isSalePending = false;
             _sellMinigame.OnMinigameEnded -= OnSellGameEnded;
 

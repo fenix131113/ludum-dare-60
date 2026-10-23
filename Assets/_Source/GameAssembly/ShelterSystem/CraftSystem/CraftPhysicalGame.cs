@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using GameAssembly.Core;
 using GameAssembly.Player;
 using GameAssembly.Player.Data;
 using UnityEngine;
@@ -20,7 +21,9 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [SerializeField] private Transform[] itemSpawnPoints;
         [SerializeField] private float dragElevation = 0.08f;
         [SerializeField] private LayerMask draggableLayers = ~0;
-        [SerializeField] private bool returnToSpawnIfNotSnapped = false;
+        [SerializeField] private bool returnToSpawnIfNotSnapped;
+        [SerializeField] private AudioClip craftSuccessSound;
+        [SerializeField] private float craftSuccessVolume;
 
         [Header("Camera & Transitions")]
         [SerializeField] private Camera interactionCamera;
@@ -33,6 +36,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
         [Inject] private PlayerState _playerState;
         [Inject] private PlayerCamera _playerCamera;
         [Inject] private PlayerInput _playerInput;
+        [Inject] private AudioSoundPlayer _soundsPlayer;
 
         private readonly Dictionary<CraftItemSO, CraftWorkspace> _workspaceMap = new();
         private CraftWorkspace _currentWorkspace;
@@ -296,6 +300,7 @@ namespace GameAssembly.ShelterSystem.CraftSystem
 
         private void OnCraftSuccess()
         {
+            _soundsPlayer.PlaySound(craftSuccessSound, craftSuccessVolume);
             _isCompleting = true;
             _isCrafting = false;
 
